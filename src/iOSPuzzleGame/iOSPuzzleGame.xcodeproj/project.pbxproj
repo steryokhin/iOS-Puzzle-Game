@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E0E94D31EE34FD3003D85E8 /* PuzzleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0E94D21EE34FD3003D85E8 /* PuzzleViewController.xib */; };
+		2E1516A31EE34A9E00AE426F /* iOSPuzzleGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1516A21EE34A9E00AE426F /* iOSPuzzleGameTests.m */; };
+		2E3ABB5C1EE34E9C00E152F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB4F1EE34E9C00E152F8 /* AppDelegate.m */; };
+		2E3ABB5D1EE34E9C00E152F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB501EE34E9C00E152F8 /* main.m */; };
+		2E3ABB5E1EE34E9C00E152F8 /* PuzzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB5B1EE34E9C00E152F8 /* PuzzleViewController.m */; };
+		2E3ABB671EE34EBF00E152F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E3ABB611EE34EBF00E152F8 /* Assets.xcassets */; };
+		2E3ABB681EE34EBF00E152F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E3ABB631EE34EBF00E152F8 /* LaunchScreen.storyboard */; };
+		2E3ABB691EE34EBF00E152F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E3ABB651EE34EBF00E152F8 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E15169F1EE34A9E00AE426F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E15167D1EE34A9E00AE426F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E1516841EE34A9E00AE426F;
+			remoteInfo = iOSPuzzleGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E0E94D21EE34FD3003D85E8 /* PuzzleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PuzzleViewController.xib; sourceTree = "<group>"; };
+		2E1516851EE34A9E00AE426F /* iOSPuzzleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPuzzleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1516991EE34A9E00AE426F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E15169E1EE34A9E00AE426F /* iOSPuzzleGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSPuzzleGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1516A21EE34A9E00AE426F /* iOSPuzzleGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSPuzzleGameTests.m; sourceTree = "<group>"; };
+		2E1516A41EE34A9E00AE426F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E3ABB4E1EE34E9C00E152F8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E3ABB4F1EE34E9C00E152F8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E3ABB501EE34E9C00E152F8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/Application/main.m; sourceTree = "<group>"; };
+		2E3ABB5A1EE34E9C00E152F8 /* PuzzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleViewController.h; sourceTree = "<group>"; };
+		2E3ABB5B1EE34E9C00E152F8 /* PuzzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleViewController.m; sourceTree = "<group>"; };
+		2E3ABB611EE34EBF00E152F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E3ABB641EE34EBF00E152F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E3ABB661EE34EBF00E152F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E1516821EE34A9E00AE426F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E15169B1EE34A9E00AE426F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E15167C1EE34A9E00AE426F = {
+			isa = PBXGroup;
+			children = (
+				2E1516871EE34A9E00AE426F /* iOSPuzzleGame */,
+				2E1516A11EE34A9E00AE426F /* iOSPuzzleGameTests */,
+				2E1516861EE34A9E00AE426F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E1516861EE34A9E00AE426F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E1516851EE34A9E00AE426F /* iOSPuzzleGame.app */,
+				2E15169E1EE34A9E00AE426F /* iOSPuzzleGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E1516871EE34A9E00AE426F /* iOSPuzzleGame */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB5F1EE34EBF00E152F8 /* resources */,
+				2E3ABB4B1EE34E9C00E152F8 /* src */,
+				2E1516881EE34A9E00AE426F /* Supporting Files */,
+			);
+			path = iOSPuzzleGame;
+			sourceTree = "<group>";
+		};
+		2E1516881EE34A9E00AE426F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E1516991EE34A9E00AE426F /* Info.plist */,
+				2E3ABB501EE34E9C00E152F8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E1516A11EE34A9E00AE426F /* iOSPuzzleGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E1516A21EE34A9E00AE426F /* iOSPuzzleGameTests.m */,
+				2E1516A41EE34A9E00AE426F /* Info.plist */,
+			);
+			path = iOSPuzzleGameTests;
+			sourceTree = "<group>";
+		};
+		2E3ABB4B1EE34E9C00E152F8 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB4C1EE34E9C00E152F8 /* Application */,
+				2E3ABB511EE34E9C00E152F8 /* Core */,
+				2E3ABB561EE34E9C00E152F8 /* Presentation */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2E3ABB4C1EE34E9C00E152F8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB4D1EE34E9C00E152F8 /* AppDelegate */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2E3ABB4D1EE34E9C00E152F8 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB4E1EE34E9C00E152F8 /* AppDelegate.h */,
+				2E3ABB4F1EE34E9C00E152F8 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2E3ABB511EE34E9C00E152F8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB521EE34E9C00E152F8 /* Extensions */,
+				2E3ABB531EE34E9C00E152F8 /* Helpers */,
+				2E3ABB541EE34E9C00E152F8 /* Services */,
+				2E3ABB551EE34E9C00E152F8 /* UI Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2E3ABB521EE34E9C00E152F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2E3ABB531EE34E9C00E152F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2E3ABB541EE34E9C00E152F8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2E3ABB551EE34E9C00E152F8 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		2E3ABB561EE34E9C00E152F8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB571EE34E9C00E152F8 /* User Story */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2E3ABB571EE34E9C00E152F8 /* User Story */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB581EE34E9C00E152F8 /* Puzzle */,
+			);
+			path = "User Story";
+			sourceTree = "<group>";
+		};
+		2E3ABB581EE34E9C00E152F8 /* Puzzle */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB591EE34E9C00E152F8 /* view */,
+			);
+			path = Puzzle;
+			sourceTree = "<group>";
+		};
+		2E3ABB591EE34E9C00E152F8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB5A1EE34E9C00E152F8 /* PuzzleViewController.h */,
+				2E3ABB5B1EE34E9C00E152F8 /* PuzzleViewController.m */,
+				2E0E94D21EE34FD3003D85E8 /* PuzzleViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2E3ABB5F1EE34EBF00E152F8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB601EE34EBF00E152F8 /* images */,
+				2E3ABB621EE34EBF00E152F8 /* storyboards */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		2E3ABB601EE34EBF00E152F8 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB611EE34EBF00E152F8 /* Assets.xcassets */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		2E3ABB621EE34EBF00E152F8 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2E3ABB631EE34EBF00E152F8 /* LaunchScreen.storyboard */,
+				2E3ABB651EE34EBF00E152F8 /* Main.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E1516841EE34A9E00AE426F /* iOSPuzzleGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E1516A71EE34A9E00AE426F /* Build configuration list for PBXNativeTarget "iOSPuzzleGame" */;
+			buildPhases = (
+				2E1516811EE34A9E00AE426F /* Sources */,
+				2E1516821EE34A9E00AE426F /* Frameworks */,
+				2E1516831EE34A9E00AE426F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSPuzzleGame;
+			productName = iOSPuzzleGame;
+			productReference = 2E1516851EE34A9E00AE426F /* iOSPuzzleGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E15169D1EE34A9E00AE426F /* iOSPuzzleGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E1516AA1EE34A9E00AE426F /* Build configuration list for PBXNativeTarget "iOSPuzzleGameTests" */;
+			buildPhases = (
+				2E15169A1EE34A9E00AE426F /* Sources */,
+				2E15169B1EE34A9E00AE426F /* Frameworks */,
+				2E15169C1EE34A9E00AE426F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E1516A01EE34A9E00AE426F /* PBXTargetDependency */,
+			);
+			name = iOSPuzzleGameTests;
+			productName = iOSPuzzleGameTests;
+			productReference = 2E15169E1EE34A9E00AE426F /* iOSPuzzleGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E15167D1EE34A9E00AE426F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = imacdev;
+				TargetAttributes = {
+					2E1516841EE34A9E00AE426F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5HRLMFUWVY;
+						ProvisioningStyle = Automatic;
+					};
+					2E15169D1EE34A9E00AE426F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5HRLMFUWVY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2E1516841EE34A9E00AE426F;
+					};
+				};
+			};
+			buildConfigurationList = 2E1516801EE34A9E00AE426F /* Build configuration list for PBXProject "iOSPuzzleGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E15167C1EE34A9E00AE426F;
+			productRefGroup = 2E1516861EE34A9E00AE426F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E1516841EE34A9E00AE426F /* iOSPuzzleGame */,
+				2E15169D1EE34A9E00AE426F /* iOSPuzzleGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E1516831EE34A9E00AE426F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3ABB691EE34EBF00E152F8 /* Main.storyboard in Resources */,
+				2E3ABB671EE34EBF00E152F8 /* Assets.xcassets in Resources */,
+				2E0E94D31EE34FD3003D85E8 /* PuzzleViewController.xib in Resources */,
+				2E3ABB681EE34EBF00E152F8 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E15169C1EE34A9E00AE426F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E1516811EE34A9E00AE426F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E3ABB5E1EE34E9C00E152F8 /* PuzzleViewController.m in Sources */,
+				2E3ABB5D1EE34E9C00E152F8 /* main.m in Sources */,
+				2E3ABB5C1EE34E9C00E152F8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E15169A1EE34A9E00AE426F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1516A31EE34A9E00AE426F /* iOSPuzzleGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E1516A01EE34A9E00AE426F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E1516841EE34A9E00AE426F /* iOSPuzzleGame */;
+			targetProxy = 2E15169F1EE34A9E00AE426F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E3ABB631EE34EBF00E152F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3ABB641EE34EBF00E152F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2E3ABB651EE34EBF00E152F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E3ABB661EE34EBF00E152F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E1516A51EE34A9E00AE426F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E1516A61EE34A9E00AE426F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E1516A81EE34A9E00AE426F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5HRLMFUWVY;
+				INFOPLIST_FILE = iOSPuzzleGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = imacdev.iOSPuzzleGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2E1516A91EE34A9E00AE426F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5HRLMFUWVY;
+				INFOPLIST_FILE = iOSPuzzleGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = imacdev.iOSPuzzleGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2E1516AB1EE34A9E00AE426F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5HRLMFUWVY;
+				INFOPLIST_FILE = iOSPuzzleGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = imacdev.iOSPuzzleGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSPuzzleGame.app/iOSPuzzleGame";
+			};
+			name = Debug;
+		};
+		2E1516AC1EE34A9E00AE426F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5HRLMFUWVY;
+				INFOPLIST_FILE = iOSPuzzleGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = imacdev.iOSPuzzleGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSPuzzleGame.app/iOSPuzzleGame";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E1516801EE34A9E00AE426F /* Build configuration list for PBXProject "iOSPuzzleGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1516A51EE34A9E00AE426F /* Debug */,
+				2E1516A61EE34A9E00AE426F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E1516A71EE34A9E00AE426F /* Build configuration list for PBXNativeTarget "iOSPuzzleGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1516A81EE34A9E00AE426F /* Debug */,
+				2E1516A91EE34A9E00AE426F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E1516AA1EE34A9E00AE426F /* Build configuration list for PBXNativeTarget "iOSPuzzleGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1516AB1EE34A9E00AE426F /* Debug */,
+				2E1516AC1EE34A9E00AE426F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E15167D1EE34A9E00AE426F /* Project object */;
+}
