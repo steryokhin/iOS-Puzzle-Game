@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2E0E94D31EE34FD3003D85E8 /* PuzzleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0E94D21EE34FD3003D85E8 /* PuzzleViewController.xib */; };
+		2E0E94D81EE371E5003D85E8 /* PuzzlePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E94D71EE371E5003D85E8 /* PuzzlePresenter.m */; };
+		2E0E94E41EE37395003D85E8 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E94E31EE37395003D85E8 /* DownloadManager.m */; };
+		2E0E94F31EE37845003D85E8 /* BoardPuzzleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E94F01EE37845003D85E8 /* BoardPuzzleModel.m */; };
+		2E0E94F41EE37845003D85E8 /* PuzzlePart.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E94F21EE37845003D85E8 /* PuzzlePart.m */; };
+		2E0E94F71EE37AE5003D85E8 /* PuzzleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E94F61EE37AE5003D85E8 /* PuzzleViewModel.m */; };
+		2E0E94FE1EE38C0C003D85E8 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E94FD1EE38C0C003D85E8 /* GameManager.m */; };
 		2E1516A31EE34A9E00AE426F /* iOSPuzzleGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1516A21EE34A9E00AE426F /* iOSPuzzleGameTests.m */; };
 		2E3ABB5C1EE34E9C00E152F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB4F1EE34E9C00E152F8 /* AppDelegate.m */; };
 		2E3ABB5D1EE34E9C00E152F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB501EE34E9C00E152F8 /* main.m */; };
@@ -29,6 +35,27 @@
 
 /* Begin PBXFileReference section */
 		2E0E94D21EE34FD3003D85E8 /* PuzzleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PuzzleViewController.xib; sourceTree = "<group>"; };
+		2E0E94D61EE371E5003D85E8 /* PuzzlePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzlePresenter.h; sourceTree = "<group>"; };
+		2E0E94D71EE371E5003D85E8 /* PuzzlePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzlePresenter.m; sourceTree = "<group>"; };
+		2E0E94D91EE37201003D85E8 /* PuzzlePresenterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzlePresenterInput.h; sourceTree = "<group>"; };
+		2E0E94DA1EE37216003D85E8 /* PuzzleViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleViewInput.h; sourceTree = "<group>"; };
+		2E0E94DB1EE372C0003D85E8 /* PuzzleViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleViewOutput.h; sourceTree = "<group>"; };
+		2E0E94DE1EE37352003D85E8 /* DownloadManagerInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManagerInput.h; sourceTree = "<group>"; };
+		2E0E94DF1EE37363003D85E8 /* DownloadManagerOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManagerOutput.h; sourceTree = "<group>"; };
+		2E0E94E21EE37395003D85E8 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		2E0E94E31EE37395003D85E8 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		2E0E94E61EE373CC003D85E8 /* SplitImageServiceInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitImageServiceInput.h; sourceTree = "<group>"; };
+		2E0E94E71EE373DB003D85E8 /* SplitImageOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitImageOutput.h; sourceTree = "<group>"; };
+		2E0E94EF1EE37845003D85E8 /* BoardPuzzleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardPuzzleModel.h; sourceTree = "<group>"; };
+		2E0E94F01EE37845003D85E8 /* BoardPuzzleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardPuzzleModel.m; sourceTree = "<group>"; };
+		2E0E94F11EE37845003D85E8 /* PuzzlePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzlePart.h; sourceTree = "<group>"; };
+		2E0E94F21EE37845003D85E8 /* PuzzlePart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzlePart.m; sourceTree = "<group>"; };
+		2E0E94F51EE37AE5003D85E8 /* PuzzleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleViewModel.h; sourceTree = "<group>"; };
+		2E0E94F61EE37AE5003D85E8 /* PuzzleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleViewModel.m; sourceTree = "<group>"; };
+		2E0E94FB1EE38BFE003D85E8 /* GameManagerInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManagerInput.h; sourceTree = "<group>"; };
+		2E0E94FC1EE38C0C003D85E8 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		2E0E94FD1EE38C0C003D85E8 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
+		2E0E94FF1EE38E4C003D85E8 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		2E1516851EE34A9E00AE426F /* iOSPuzzleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPuzzleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1516991EE34A9E00AE426F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E15169E1EE34A9E00AE426F /* iOSPuzzleGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSPuzzleGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +89,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0E94D41EE371B6003D85E8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2E0E94F51EE37AE5003D85E8 /* PuzzleViewModel.h */,
+				2E0E94F61EE37AE5003D85E8 /* PuzzleViewModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		2E0E94D51EE371B6003D85E8 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2E0E94D61EE371E5003D85E8 /* PuzzlePresenter.h */,
+				2E0E94D71EE371E5003D85E8 /* PuzzlePresenter.m */,
+				2E0E94D91EE37201003D85E8 /* PuzzlePresenterInput.h */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		2E0E94DC1EE3731E003D85E8 /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				2E0E94E11EE37388003D85E8 /* Implementation */,
+				2E0E94DE1EE37352003D85E8 /* DownloadManagerInput.h */,
+				2E0E94DF1EE37363003D85E8 /* DownloadManagerOutput.h */,
+			);
+			path = DownloadManager;
+			sourceTree = "<group>";
+		};
+		2E0E94DD1EE3731E003D85E8 /* SplitImageService */ = {
+			isa = PBXGroup;
+			children = (
+				2E0E94E51EE373B9003D85E8 /* Implementation */,
+				2E0E94E61EE373CC003D85E8 /* SplitImageServiceInput.h */,
+				2E0E94E71EE373DB003D85E8 /* SplitImageOutput.h */,
+			);
+			path = SplitImageService;
+			sourceTree = "<group>";
+		};
+		2E0E94E11EE37388003D85E8 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				2E0E94E21EE37395003D85E8 /* DownloadManager.h */,
+				2E0E94E31EE37395003D85E8 /* DownloadManager.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		2E0E94E51EE373B9003D85E8 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		2E0E94EB1EE3752A003D85E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E0E94EF1EE37845003D85E8 /* BoardPuzzleModel.h */,
+				2E0E94F01EE37845003D85E8 /* BoardPuzzleModel.m */,
+				2E0E94F11EE37845003D85E8 /* PuzzlePart.h */,
+				2E0E94F21EE37845003D85E8 /* PuzzlePart.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E0E94F81EE38B8A003D85E8 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				2E0E94F91EE38B96003D85E8 /* GameManager */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		2E0E94F91EE38B96003D85E8 /* GameManager */ = {
+			isa = PBXGroup;
+			children = (
+				2E0E94FA1EE38BB4003D85E8 /* Implementation */,
+				2E0E94FB1EE38BFE003D85E8 /* GameManagerInput.h */,
+			);
+			path = GameManager;
+			sourceTree = "<group>";
+		};
+		2E0E94FA1EE38BB4003D85E8 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				2E0E94FC1EE38C0C003D85E8 /* GameManager.h */,
+				2E0E94FD1EE38C0C003D85E8 /* GameManager.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
 		2E15167C1EE34A9E00AE426F = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +230,8 @@
 		2E3ABB4B1EE34E9C00E152F8 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2E0E94F81EE38B8A003D85E8 /* BusinessLogic */,
+				2E0E94EB1EE3752A003D85E8 /* Model */,
 				2E3ABB4C1EE34E9C00E152F8 /* Application */,
 				2E3ABB511EE34E9C00E152F8 /* Core */,
 				2E3ABB561EE34E9C00E152F8 /* Presentation */,
@@ -156,6 +277,7 @@
 		2E3ABB531EE34E9C00E152F8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2E0E94FF1EE38E4C003D85E8 /* Constants.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -163,6 +285,8 @@
 		2E3ABB541EE34E9C00E152F8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2E0E94DC1EE3731E003D85E8 /* DownloadManager */,
+				2E0E94DD1EE3731E003D85E8 /* SplitImageService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -193,6 +317,8 @@
 		2E3ABB581EE34E9C00E152F8 /* Puzzle */ = {
 			isa = PBXGroup;
 			children = (
+				2E0E94D41EE371B6003D85E8 /* model */,
+				2E0E94D51EE371B6003D85E8 /* presenter */,
 				2E3ABB591EE34E9C00E152F8 /* view */,
 			);
 			path = Puzzle;
@@ -204,6 +330,8 @@
 				2E3ABB5A1EE34E9C00E152F8 /* PuzzleViewController.h */,
 				2E3ABB5B1EE34E9C00E152F8 /* PuzzleViewController.m */,
 				2E0E94D21EE34FD3003D85E8 /* PuzzleViewController.xib */,
+				2E0E94DA1EE37216003D85E8 /* PuzzleViewInput.h */,
+				2E0E94DB1EE372C0003D85E8 /* PuzzleViewOutput.h */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -341,6 +469,12 @@
 			files = (
 				2E3ABB5E1EE34E9C00E152F8 /* PuzzleViewController.m in Sources */,
 				2E3ABB5D1EE34E9C00E152F8 /* main.m in Sources */,
+				2E0E94F71EE37AE5003D85E8 /* PuzzleViewModel.m in Sources */,
+				2E0E94F41EE37845003D85E8 /* PuzzlePart.m in Sources */,
+				2E0E94FE1EE38C0C003D85E8 /* GameManager.m in Sources */,
+				2E0E94D81EE371E5003D85E8 /* PuzzlePresenter.m in Sources */,
+				2E0E94F31EE37845003D85E8 /* BoardPuzzleModel.m in Sources */,
+				2E0E94E41EE37395003D85E8 /* DownloadManager.m in Sources */,
 				2E3ABB5C1EE34E9C00E152F8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

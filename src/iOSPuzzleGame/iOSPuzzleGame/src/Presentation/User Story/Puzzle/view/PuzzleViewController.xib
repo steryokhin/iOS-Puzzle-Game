@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,21 +16,50 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puzzle View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYt-0B-CSx">
-                    <rect key="frame" x="101" y="323" width="172" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELZ-86-AIu">
+                    <rect key="frame" x="0.0" y="0.0" width="587" height="375"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KGc-1y-wIp">
+                            <rect key="frame" x="8" y="8" width="571" height="359"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w56-Kx-dfL">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.76467413650000005" blue="0.13031969569999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="KGc-1y-wIp" secondAttribute="bottom" constant="8" id="4gl-UJ-UGF"/>
+                        <constraint firstItem="KGc-1y-wIp" firstAttribute="leading" secondItem="ELZ-86-AIu" secondAttribute="leading" constant="8" id="Nvd-gC-57Y"/>
+                        <constraint firstAttribute="trailing" secondItem="KGc-1y-wIp" secondAttribute="trailing" constant="8" id="d6V-Us-Kzh"/>
+                        <constraint firstItem="KGc-1y-wIp" firstAttribute="top" secondItem="ELZ-86-AIu" secondAttribute="top" constant="8" id="zDm-hz-4PS"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRn-Ll-JYe">
+                    <rect key="frame" x="587" y="0.0" width="80" height="375"/>
+                    <color key="backgroundColor" red="1" green="0.71184098640000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="MTd-PN-aB9"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="SYt-0B-CSx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="24G-p8-dHj"/>
-                <constraint firstItem="SYt-0B-CSx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="juZ-UO-7qF"/>
+                <constraint firstItem="NRn-Ll-JYe" firstAttribute="leading" secondItem="ELZ-86-AIu" secondAttribute="trailing" id="8Ms-Y3-liK"/>
+                <constraint firstItem="ELZ-86-AIu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AgJ-GH-giA"/>
+                <constraint firstItem="NRn-Ll-JYe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BcT-UM-RDT"/>
+                <constraint firstAttribute="trailing" secondItem="NRn-Ll-JYe" secondAttribute="trailing" id="GyG-4Z-k2b"/>
+                <constraint firstAttribute="bottom" secondItem="NRn-Ll-JYe" secondAttribute="bottom" id="WGf-Xp-2vt"/>
+                <constraint firstItem="ELZ-86-AIu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WO7-Tc-8Wc"/>
+                <constraint firstAttribute="bottom" secondItem="ELZ-86-AIu" secondAttribute="bottom" id="bg2-uV-LIy"/>
             </constraints>
+            <point key="canvasLocation" x="54.5" y="-21.5"/>
         </view>
     </objects>
 </document>
