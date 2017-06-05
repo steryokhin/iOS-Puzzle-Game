@@ -76,11 +76,14 @@
 - (void)imageDownloaded:(UIImage *)image {
     NSLog(@"Image downloaded successfully");
 
-    self.viewModel.model.originalImage = image;
+    BoardPuzzleModel *puzzleModel = [[BoardPuzzleModel alloc] initWithOriginalImage:image parts:nil];
+    self.viewModel.model = puzzleModel;
     self.viewModel.gameState = PuzzleGameStateStarting;
     self.viewModel.startGameCounter = self.viewModel.config.startGameCounter;
 
     [self.view updateWithModel:self.viewModel];
+
+
 }
 
 - (void)imageDownloadFailed:(NSError *)error {

@@ -54,6 +54,10 @@
             [self updateGameStateWithModel:copyModel];
         }
 
+        if (self.viewModel.model.originalImage != copyModel.model.originalImage) {
+            self.startGameView.imagePreviewView.image = copyModel.model.originalImage;
+        }
+
         if (self.viewModel.startGameCounter != copyModel.startGameCounter && copyModel.gameState == PuzzleGameStateStarting) {
             [self updateStartGameCounterWithModel:copyModel];
         }

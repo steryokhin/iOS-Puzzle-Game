@@ -11,6 +11,19 @@
 #import "PuzzleViewModel.h"
 
 @implementation BoardPuzzleModel
+- (instancetype)initWithOriginalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts {
+    self = [super init];
+    if (self) {
+        self.originalImage = originalImage;
+        self.parts = parts;
+    }
+
+    return self;
+}
+
++ (instancetype)modelWithOriginalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts {
+    return [[self alloc] initWithOriginalImage:originalImage parts:parts];
+}
 
 
 - (id)copyWithZone:(nullable NSZone *)zone {
