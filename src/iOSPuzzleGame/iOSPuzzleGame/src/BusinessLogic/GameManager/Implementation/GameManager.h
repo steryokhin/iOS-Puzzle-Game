@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@protocol GameManagerInput;
+#import "GameManagerInput.h"
 
 @interface GameManager : NSObject<GameManagerInput>
 

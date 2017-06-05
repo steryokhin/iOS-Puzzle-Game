@@ -9,6 +9,7 @@
 #import "GameManager.h"
 #import "GameManagerInput.h"
 #import "Constants.h"
+#import "GameConfig.h"
 
 
 @implementation GameManager
@@ -25,8 +26,13 @@
     return _instance;
 }
 
-- (NSString *)getNextImagePath {
-    return kDownloadImagePath;
+- (GameConfig *)getNextGame {
+    return [[GameConfig alloc] initWithImagePath:kDownloadImagePath
+                                               rowCount:4
+                                            columnCount:3
+                                       startGameCounter:3
+                                         startGameDelay:2.0
+                                           gameDuration:21];
 }
 
 @end

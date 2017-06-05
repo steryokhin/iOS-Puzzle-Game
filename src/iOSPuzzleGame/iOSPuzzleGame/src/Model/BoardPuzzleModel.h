@@ -10,13 +10,26 @@
 #import <UIKit/UIKit.h>
 
 @class PuzzlePart;
+@class GameConfig;
 
-@interface BoardPuzzleModel : NSObject
+NS_ASSUME_NONNULL_BEGIN
+
+@interface BoardPuzzleModel : NSObject <NSCopying>
+
 
 @property (nonatomic, strong, readonly) UIImage *originalImage;
 @property (nonatomic, strong, readonly) NSArray<PuzzlePart *> *parts;
 
-@property (nonatomic, assign, readonly) NSUInteger rowCount;
-@property (nonatomic, assign, readonly) NSUInteger columnCount;
+- (id)copyWithZone:(nullable NSZone *)zone;
+
+- (BOOL)isEqual:(id)other;
+
+- (BOOL)isEqualToModel:(BoardPuzzleModel *)model;
+
+- (NSUInteger)hash;
+
+- (NSString *)description;
 
 @end
+
+NS_ASSUME_NONNULL_END

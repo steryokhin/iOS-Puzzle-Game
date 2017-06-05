@@ -12,8 +12,8 @@
 
 
 
-- (void)startDownloadWithPath:(NSString *)path delegate:(NSObject<DownloadManagerOutput>)delegate {
-
+- (instancetype)initWithPath:(NSString *)path delegate:(NSObject<DownloadManagerOutput> *)delegate {
+    return self;
 }
 
 @end
