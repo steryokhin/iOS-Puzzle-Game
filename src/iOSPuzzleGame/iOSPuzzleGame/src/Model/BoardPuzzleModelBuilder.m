@@ -10,19 +10,14 @@
 
 
 @implementation BoardPuzzleModelBuilder
-- (instancetype)initWithConfig:(GameConfig *)config {
-    self = [super init];
-    if (self) {
-        self.config = config;
-    }
 
-    return self;
+- (instancetype)initWithBoardPuzzleModel:(BoardPuzzleModel *)model {
+    return [self initWithOriginalImage:model.originalImage parts:model.parts];
 }
 
-- (instancetype)initWithConfig:(GameConfig *)config originalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts {
+- (instancetype)initWithOriginalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts {
     self = [super init];
     if (self) {
-        self.config = config;
         self.originalImage = originalImage;
         self.parts = parts;
     }
@@ -30,17 +25,22 @@
     return self;
 }
 
-+ (instancetype)builderWithConfig:(GameConfig *)config originalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts {
-    return [[self alloc] initWithConfig:config originalImage:originalImage parts:parts];
++ (instancetype)builderWithOriginalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts {
+    return [[self alloc] initWithOriginalImage:originalImage parts:parts];
 }
 
-
-+ (instancetype)builderWithConfig:(GameConfig *)config {
-    return [[self alloc] initWithConfig:config];
-}
 
 - (BoardPuzzleModel *)build {
     return nil;
 }
+
+- (NSString *)description {
+    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@:%p", NSStringFromClass([self class]), self];
+    [description appendFormat:@"self.originalImage=%@", self.originalImage];
+    [description appendFormat:@", self.parts=%@", self.parts];
+    [description appendString:@">"];
+    return description;
+}
+
 
 @end

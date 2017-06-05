@@ -11,6 +11,8 @@
 
 #import "LoadingView.h"
 
+@class StartGameView;
+
 @interface PuzzleViewController : UIViewController<PuzzleViewInput>
 
 /*
@@ -21,7 +23,7 @@
 /*
  * Start game counter view
  */
-@property (nonatomic, weak) IBOutlet UIView *startGameView;
+@property (nonatomic, weak) IBOutlet StartGameView *startGameView;
 
 @end
 

@@ -18,6 +18,7 @@
 		2E0E95071EE56041003D85E8 /* StartGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E95061EE56041003D85E8 /* StartGameView.m */; };
 		2E0E95091EE56141003D85E8 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0E95081EE56141003D85E8 /* LoadingView.xib */; };
 		2E0E950B1EE56257003D85E8 /* StartGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0E950A1EE56257003D85E8 /* StartGameView.xib */; };
+		2E0E950E1EE5F499003D85E8 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E950D1EE5F499003D85E8 /* Helper.m */; };
 		2E1516A31EE34A9E00AE426F /* iOSPuzzleGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1516A21EE34A9E00AE426F /* iOSPuzzleGameTests.m */; };
 		2E3ABB5C1EE34E9C00E152F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB4F1EE34E9C00E152F8 /* AppDelegate.m */; };
 		2E3ABB5D1EE34E9C00E152F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB501EE34E9C00E152F8 /* main.m */; };
@@ -68,6 +69,9 @@
 		2E0E95061EE56041003D85E8 /* StartGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartGameView.m; sourceTree = "<group>"; };
 		2E0E95081EE56141003D85E8 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		2E0E950A1EE56257003D85E8 /* StartGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartGameView.xib; sourceTree = "<group>"; };
+		2E0E950C1EE5F499003D85E8 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		2E0E950D1EE5F499003D85E8 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		2E0E950F1EE5F501003D85E8 /* iOSPuzzleGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSPuzzleGame-Prefix.pch"; sourceTree = "<group>"; };
 		2E1516851EE34A9E00AE426F /* iOSPuzzleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPuzzleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1516991EE34A9E00AE426F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E15169E1EE34A9E00AE426F /* iOSPuzzleGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSPuzzleGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -318,6 +322,9 @@
 			isa = PBXGroup;
 			children = (
 				2E0E94FF1EE38E4C003D85E8 /* Constants.h */,
+				2E0E950C1EE5F499003D85E8 /* Helper.h */,
+				2E0E950D1EE5F499003D85E8 /* Helper.m */,
+				2E0E950F1EE5F501003D85E8 /* iOSPuzzleGame-Prefix.pch */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -522,6 +529,7 @@
 				2E0E94F31EE37845003D85E8 /* BoardPuzzleModel.m in Sources */,
 				2E0E94E41EE37395003D85E8 /* DownloadManager.m in Sources */,
 				2E3ABB5C1EE34E9C00E152F8 /* AppDelegate.m in Sources */,
+				2E0E950E1EE5F499003D85E8 /* Helper.m in Sources */,
 				DA5FB6F50A79365430C9F0DB /* BoardPuzzleModelBuilder.m in Sources */,
 				DA5324040671661732A49722 /* GameConfig.m in Sources */,
 			);
@@ -662,6 +670,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5HRLMFUWVY;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/src/Core/Helpers/iOSPuzzleGame-Prefix.pch";
 				INFOPLIST_FILE = iOSPuzzleGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = imacdev.iOSPuzzleGame;
@@ -674,6 +684,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5HRLMFUWVY;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/src/Core/Helpers/iOSPuzzleGame-Prefix.pch";
 				INFOPLIST_FILE = iOSPuzzleGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = imacdev.iOSPuzzleGame;

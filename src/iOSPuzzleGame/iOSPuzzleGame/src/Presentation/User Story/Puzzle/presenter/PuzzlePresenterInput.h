@@ -15,6 +15,4 @@
 
 - (instancetype)initWithView:(NSObject<PuzzleViewInput> *)view config:(GameConfig *)config;
 
-- (void)startWithImagePath:(NSString *)path;
-
 @end

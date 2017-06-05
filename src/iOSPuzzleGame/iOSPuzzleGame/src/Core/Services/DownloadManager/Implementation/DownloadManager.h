@@ -11,6 +11,4 @@
 
 @interface DownloadManager : NSObject<DownloadManagerInput>
 
-
-
 @end

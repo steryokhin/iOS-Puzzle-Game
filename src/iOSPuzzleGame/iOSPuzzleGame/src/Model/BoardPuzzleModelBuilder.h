@@ -16,19 +16,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithConfig:(GameConfig *)config;
-
-+ (instancetype)builderWithConfig:(GameConfig *)config;
-
-- (instancetype)initWithConfig:(GameConfig *)config originalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts;
-
-+ (instancetype)builderWithConfig:(GameConfig *)config originalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts;
-
-/// Configuration of the board and of the game
-@property (nonatomic, strong) GameConfig *config;
-
 @property (nonatomic, strong) UIImage *originalImage;
 @property (nonatomic, strong) NSArray<PuzzlePart *> *parts;
+
+- (instancetype)initWithBoardPuzzleModel:(BoardPuzzleModel *)model;
+
+- (instancetype)initWithOriginalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts;
+
++ (instancetype)builderWithOriginalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts;
+
+- (NSString *)description;
 
 - (BoardPuzzleModel *)build;
 

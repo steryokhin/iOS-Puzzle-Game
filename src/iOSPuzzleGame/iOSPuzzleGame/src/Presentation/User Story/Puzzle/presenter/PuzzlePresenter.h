@@ -16,8 +16,6 @@
 
 @interface PuzzlePresenter : NSObject<PuzzlePresenterInput, PuzzleViewOutput, DownloadManagerOutput>
 
-
-
 @property (nonatomic, strong) PuzzleViewModel *viewModel;
 
 @end

@@ -93,7 +93,7 @@
 
     if (copy != nil) {
         copy->_config = _config;
-        copy.model = self.model;
+        copy.model = [self.model copy];
         copy.gameState = self.gameState;
         copy.startGameCounter = self.startGameCounter;
         copy.startGameDelay = self.startGameDelay;

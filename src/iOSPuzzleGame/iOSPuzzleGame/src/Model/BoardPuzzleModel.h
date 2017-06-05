@@ -16,9 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BoardPuzzleModel : NSObject <NSCopying>
 
-
-@property (nonatomic, strong, readonly) UIImage *originalImage;
-@property (nonatomic, strong, readonly) NSArray<PuzzlePart *> *parts;
+@property (nonatomic, strong) UIImage *originalImage;
+@property (nonatomic, strong) NSArray<PuzzlePart *> *parts;
 
 - (id)copyWithZone:(nullable NSZone *)zone;
 

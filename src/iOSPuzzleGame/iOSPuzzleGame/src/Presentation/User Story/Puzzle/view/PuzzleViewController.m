@@ -11,10 +11,12 @@
 #import "PuzzleViewModel.h"
 #import "PuzzlePresenter.h"
 #import "GameManager.h"
+#import "StartGameView.h"
 
 @interface PuzzleViewController ()
 
 @property (nonatomic, strong) PuzzlePresenter *presenter;
+@property (nonatomic, copy) PuzzleViewModel *viewModel;
 
 @end
 
@@ -37,11 +39,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+ 
 - (void)setupWithModel:(PuzzleViewModel *)model {
     
 }
 
 - (void)updateWithModel:(PuzzleViewModel *)model {
+    NSLog(@"updateWithModel: %@", model);
+    
+    PuzzleViewModel *copyModel = [model copy];
+    
+    if (self.viewModel != copyModel) {
+        if (self.viewModel.gameState != copyModel.gameState) {
+            [self updateGameStateWithModel:copyModel];
+        }
+
+        if (self.viewModel.startGameCounter != copyModel.startGameCounter && copyModel.gameState == PuzzleGameStateStarting) {
+            [self updateStartGameCounterWithModel:copyModel];
+        }
+
+        self.viewModel = [copyModel copy];
+    }
+}
+
+
+- (void)updateGameStateWithModel:(PuzzleViewModel *)model {
     switch (model.gameState) {
         case PuzzleGameStateNoImage: {
             [self hideStartGameView];
@@ -54,7 +76,7 @@
         } break;
 
         case PuzzleGameStateGameInProgress: {
-
+            [self hideStartGameView];
         } break;
 
         case PuzzleGameStateFinished: {
@@ -65,6 +87,14 @@
 
         }
     }
+}
+
+- (void)updateStartGameCounterWithModel:(PuzzleViewModel *)model {
+    NSLog(@"updateStartGameCounterWithModel: %@", model);
+
+    self.startGameView.counterLabel.text = [@(model.startGameCounter) stringValue];
+
+    [self.presenter startGameCounterUpdated];
 }
 
 - (void)updateWithBoardPuzzleModel:(BoardPuzzleModel *)boardModel {

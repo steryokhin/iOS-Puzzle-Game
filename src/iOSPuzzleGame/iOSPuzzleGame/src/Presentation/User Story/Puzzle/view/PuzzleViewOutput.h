@@ -12,4 +12,6 @@
 
 - (void)viewIsLoaded;
 
+- (void)startGameCounterUpdated;
+
 @end
