@@ -14,6 +14,4 @@
 
 - (instancetype)initWithPath:(NSString *)path delegate:(NSObject<DownloadManagerOutput> *)delegate;
 
-
-
 @end

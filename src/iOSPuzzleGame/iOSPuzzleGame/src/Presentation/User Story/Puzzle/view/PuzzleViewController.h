@@ -7,9 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PuzzleViewInput.h"
 
-@interface PuzzleViewController : UIViewController
+#import "LoadingView.h"
 
+@interface PuzzleViewController : UIViewController<PuzzleViewInput>
+
+/*
+ * View with label Loading to indicate to user that game resources loading in the progress
+ */
+@property (nonatomic, weak) IBOutlet LoadingView *loadingView;
+
+/*
+ * Start game counter view
+ */
+@property (nonatomic, weak) IBOutlet UIView *startGameView;
 
 @end
 

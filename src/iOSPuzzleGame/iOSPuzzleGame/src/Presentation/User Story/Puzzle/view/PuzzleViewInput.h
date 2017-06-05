@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class BoardPuzzleModel;
+@class PuzzleViewModel;
+
 @protocol PuzzleViewInput <NSObject>
+
+- (void)setupWithModel:(PuzzleViewModel *)model;
+- (void)updateWithModel:(PuzzleViewModel *)model;
+
+- (void)updateWithBoardPuzzleModel:(BoardPuzzleModel *)boardModel;
 
 @end

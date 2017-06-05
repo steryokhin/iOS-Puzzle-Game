@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class GameConfig;
+
 @protocol GameManagerInput <NSObject>
 
-- (NSString *)getNextImagePath;
+- (GameConfig *)getNextGame;
 
 @end

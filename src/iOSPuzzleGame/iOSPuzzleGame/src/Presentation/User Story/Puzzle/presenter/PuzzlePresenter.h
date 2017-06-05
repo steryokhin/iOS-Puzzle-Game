@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DownloadManagerInput.h"
+#import "PuzzleViewOutput.h"
+#import "PuzzlePresenterInput.h"
 
 @class PuzzleViewModel;
+@class BoardPuzzleModel;
 
-@interface PuzzlePresenter : NSObject
+@interface PuzzlePresenter : NSObject<PuzzlePresenterInput, PuzzleViewOutput, DownloadManagerOutput>
+
+
 
 @property (nonatomic, strong) PuzzleViewModel *viewModel;
 
