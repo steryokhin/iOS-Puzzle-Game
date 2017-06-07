@@ -28,9 +28,9 @@
 
 - (GameConfig *)getNextGame {
     return [[GameConfig alloc] initWithImagePath:kDownloadImagePath
-                                               rowCount:4
+                                               rowCount:3
                                             columnCount:3
-                                       startGameCounter:3
+                                       startGameCounter:1
                                          startGameDelay:2.0
                                            gameDuration:21];
 }

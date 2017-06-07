@@ -15,7 +15,7 @@
 @class PuzzleViewModel;
 @class BoardPuzzleModel;
 
-@interface PuzzlePresenter : NSObject<PuzzlePresenterInput, PuzzleViewOutput, DownloadManagerOutput>
+@interface PuzzlePresenter : NSObject<PuzzlePresenterInput, PuzzleViewOutput, DownloadManagerOutput, UICollectionViewDataSource>
 
 @property (nonatomic, strong) PuzzleViewModel *viewModel;
 

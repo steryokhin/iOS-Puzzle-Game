@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PuzzleViewController">
             <connections>
+                <outlet property="collectionView" destination="KGc-1y-wIp" id="Lut-rs-ylr"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Ujw-06-g9O"/>
             </connections>
         </placeholder>

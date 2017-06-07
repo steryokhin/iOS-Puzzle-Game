@@ -15,6 +15,7 @@
 #import "DownloadManager.h"
 #import "BoardPuzzleModel.h"
 #import "UIImage+Splitter.h"
+#import "PuzzleCollectionViewCell.h"
 
 static const float_t kDelayBeforeNextTry = 5.0;
 static const float_t kStartGameCounterDelay = 2.0;
@@ -47,6 +48,30 @@ static const float_t kStartGameCounterDelay = 2.0;
         [self.downloader cancel];
         self.downloader  = nil;
     }
+}
+
+#pragma mark - Collection View DataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.viewModel.model.parts.count;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identifier = @"PuzzleCell";
+    NSArray *parts = self.viewModel.model.parts;
+
+    UICollectionViewCell *rawCell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    PuzzleCollectionViewCell *cell = [PuzzleCollectionViewCell castObject:rawCell];
+
+    if (cell && indexPath.row < parts.count) {
+        cell.imageView.image = parts[indexPath.row];
+    }
+
+    return cell;
 }
 
 
