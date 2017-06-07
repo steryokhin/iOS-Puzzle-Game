@@ -19,9 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImage *originalImage;
 @property (nonatomic, strong) NSArray<PuzzlePart *> *parts;
 
-- (instancetype)initWithOriginalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts;
+- (instancetype)initWithOriginalImage:(UIImage *)originalImage parts:(nullable NSArray<PuzzlePart *> *)parts;
 
-+ (instancetype)modelWithOriginalImage:(UIImage *)originalImage parts:(NSArray<PuzzlePart *> *)parts;
++ (instancetype)modelWithOriginalImage:(UIImage *)originalImage parts:(nullable NSArray<PuzzlePart *> *)parts;
 
 
 - (id)copyWithZone:(nullable NSZone *)zone;

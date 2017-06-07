@@ -19,6 +19,7 @@
 		2E0E95091EE56141003D85E8 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0E95081EE56141003D85E8 /* LoadingView.xib */; };
 		2E0E950B1EE56257003D85E8 /* StartGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0E950A1EE56257003D85E8 /* StartGameView.xib */; };
 		2E0E950E1EE5F499003D85E8 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E950D1EE5F499003D85E8 /* Helper.m */; };
+		2E0EC1D81EE63B7B00DF66C9 /* UIImage+Splitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EC1D71EE63B7B00DF66C9 /* UIImage+Splitter.m */; };
 		2E1516A31EE34A9E00AE426F /* iOSPuzzleGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1516A21EE34A9E00AE426F /* iOSPuzzleGameTests.m */; };
 		2E3ABB5C1EE34E9C00E152F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB4F1EE34E9C00E152F8 /* AppDelegate.m */; };
 		2E3ABB5D1EE34E9C00E152F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB501EE34E9C00E152F8 /* main.m */; };
@@ -72,6 +73,8 @@
 		2E0E950C1EE5F499003D85E8 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		2E0E950D1EE5F499003D85E8 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		2E0E950F1EE5F501003D85E8 /* iOSPuzzleGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSPuzzleGame-Prefix.pch"; sourceTree = "<group>"; };
+		2E0EC1D61EE63B7B00DF66C9 /* UIImage+Splitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Splitter.h"; sourceTree = "<group>"; };
+		2E0EC1D71EE63B7B00DF66C9 /* UIImage+Splitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Splitter.m"; sourceTree = "<group>"; };
 		2E1516851EE34A9E00AE426F /* iOSPuzzleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPuzzleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1516991EE34A9E00AE426F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E15169E1EE34A9E00AE426F /* iOSPuzzleGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSPuzzleGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +228,15 @@
 			path = LoadingView;
 			sourceTree = "<group>";
 		};
+		2E0EC1D51EE63B3800DF66C9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2E0EC1D61EE63B7B00DF66C9 /* UIImage+Splitter.h */,
+				2E0EC1D71EE63B7B00DF66C9 /* UIImage+Splitter.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		2E15167C1EE34A9E00AE426F = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +315,7 @@
 		2E3ABB511EE34E9C00E152F8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2E0EC1D51EE63B3800DF66C9 /* Categories */,
 				2E3ABB521EE34E9C00E152F8 /* Extensions */,
 				2E3ABB531EE34E9C00E152F8 /* Helpers */,
 				2E3ABB541EE34E9C00E152F8 /* Services */,
@@ -532,6 +545,7 @@
 				2E0E950E1EE5F499003D85E8 /* Helper.m in Sources */,
 				DA5FB6F50A79365430C9F0DB /* BoardPuzzleModelBuilder.m in Sources */,
 				DA5324040671661732A49722 /* GameConfig.m in Sources */,
+				2E0EC1D81EE63B7B00DF66C9 /* UIImage+Splitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

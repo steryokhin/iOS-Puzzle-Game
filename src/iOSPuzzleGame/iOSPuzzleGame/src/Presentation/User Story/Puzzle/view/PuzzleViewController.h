@@ -25,5 +25,7 @@
  */
 @property (nonatomic, weak) IBOutlet StartGameView *startGameView;
 
+@property (nonatomic, weak) UICollectionView *collectionView;
+
 @end
 

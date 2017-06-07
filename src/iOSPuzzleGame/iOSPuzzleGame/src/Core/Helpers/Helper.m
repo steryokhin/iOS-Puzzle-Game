@@ -8,7 +8,13 @@
 
 #import "Helper.h"
 
-void gcdDispatchAsyncOnMainQueue(dispatch_block_t block){
+void gcdDispatchAsyncOnBackgroundQueue(dispatch_block_t block) {
+    dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+
+    dispatch_async(backgroundQueue, block);
+}
+
+void gcdDispatchAsyncOnMainQueue(dispatch_block_t block) {
     dispatch_async(dispatch_get_main_queue(), block);
 }
 
