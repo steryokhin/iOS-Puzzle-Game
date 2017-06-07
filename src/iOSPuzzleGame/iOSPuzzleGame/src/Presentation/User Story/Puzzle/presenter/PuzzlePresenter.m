@@ -14,6 +14,10 @@
 #import "PuzzleViewInput.h"
 #import "DownloadManager.h"
 #import "BoardPuzzleModel.h"
+#import "UIImage+Splitter.h"
+
+static const float_t kDelayBeforeNextTry = 5.0;
+static const float_t kStartGameCounterDelay = 2.0;
 
 @interface PuzzlePresenter()
 
@@ -58,11 +62,11 @@
     if (self.viewModel.startGameCounter > 1) {
         self.viewModel.startGameCounter -= 1;
 
-        gcdDispatchAsyncOnMainQueueAfter(2.0, ^{
+        gcdDispatchAsyncOnMainQueueAfter(kStartGameCounterDelay, ^{
             [self.view updateWithModel:self.viewModel];
         });
     } else {
-        gcdDispatchAsyncOnMainQueueAfter(2.0, ^{
+        gcdDispatchAsyncOnMainQueueAfter(kStartGameCounterDelay, ^{
             self.viewModel.startGameCounter = 0;
 
             self.viewModel.gameState = PuzzleGameStateGameInProgress;
@@ -83,13 +87,20 @@
 
     [self.view updateWithModel:self.viewModel];
 
+    gcdDispatchAsyncOnBackgroundQueue(^{
+        NSArray *images = [image splitWithNumberOfRows:self.viewModel.config.rowCount columns:self.viewModel.config.columnCount];
 
+        BoardPuzzleModel *puzzleModel = [[BoardPuzzleModel alloc] initWithOriginalImage:image parts:images];
+        self.viewModel.model = puzzleModel;
+
+        /// We don't send event here and we are sure split work fast
+    });
 }
 
 - (void)imageDownloadFailed:(NSError *)error {
     NSLog(@"Image download failed with error: %@", error);
 
-    gcdDispatchAsyncOnMainQueueAfter(5.0, ^{
+    gcdDispatchAsyncOnMainQueueAfter(kDelayBeforeNextTry, ^{
         [self requestPhoto];
     });
 }

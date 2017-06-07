@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+void gcdDispatchAsyncOnBackgroundQueue(dispatch_block_t block);
 void gcdDispatchAsyncOnMainQueue(dispatch_block_t block);
 void gcdDispatchAsyncOnMainQueueAfter(float delayInSeconds, dispatch_block_t block);
 

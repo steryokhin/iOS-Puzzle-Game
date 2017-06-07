@@ -10,6 +10,7 @@
 #import "DownloadManagerInput.h"
 #import "PuzzleViewOutput.h"
 #import "PuzzlePresenterInput.h"
+#import "DownloadManagerOutput.h"
 
 @class PuzzleViewModel;
 @class BoardPuzzleModel;
