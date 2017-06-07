@@ -19,7 +19,10 @@
 		2E0E95091EE56141003D85E8 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0E95081EE56141003D85E8 /* LoadingView.xib */; };
 		2E0E950B1EE56257003D85E8 /* StartGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0E950A1EE56257003D85E8 /* StartGameView.xib */; };
 		2E0E950E1EE5F499003D85E8 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0E950D1EE5F499003D85E8 /* Helper.m */; };
-		2E0EC1D81EE63B7B00DF66C9 /* UIImage+Splitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EC1D71EE63B7B00DF66C9 /* UIImage+Splitter.m */; };
+		2E0EC1DE1EE85C0500DF66C9 /* PuzzleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EC1DD1EE85C0500DF66C9 /* PuzzleCollectionViewCell.m */; };
+		2E0EC1E21EE85C7600DF66C9 /* UIImage+Splitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EC1E11EE85C7600DF66C9 /* UIImage+Splitter.m */; };
+		2E0EC1E71EE85CFB00DF66C9 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EC1E61EE85CFB00DF66C9 /* NSObject+Extension.m */; };
+		2E0EC1E91EE8618D00DF66C9 /* PuzzleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0EC1E81EE8618D00DF66C9 /* PuzzleCollectionViewCell.xib */; };
 		2E1516A31EE34A9E00AE426F /* iOSPuzzleGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1516A21EE34A9E00AE426F /* iOSPuzzleGameTests.m */; };
 		2E3ABB5C1EE34E9C00E152F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB4F1EE34E9C00E152F8 /* AppDelegate.m */; };
 		2E3ABB5D1EE34E9C00E152F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3ABB501EE34E9C00E152F8 /* main.m */; };
@@ -73,8 +76,13 @@
 		2E0E950C1EE5F499003D85E8 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		2E0E950D1EE5F499003D85E8 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		2E0E950F1EE5F501003D85E8 /* iOSPuzzleGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSPuzzleGame-Prefix.pch"; sourceTree = "<group>"; };
-		2E0EC1D61EE63B7B00DF66C9 /* UIImage+Splitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Splitter.h"; sourceTree = "<group>"; };
-		2E0EC1D71EE63B7B00DF66C9 /* UIImage+Splitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Splitter.m"; sourceTree = "<group>"; };
+		2E0EC1DC1EE85C0500DF66C9 /* PuzzleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuzzleCollectionViewCell.h; sourceTree = "<group>"; };
+		2E0EC1DD1EE85C0500DF66C9 /* PuzzleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuzzleCollectionViewCell.m; sourceTree = "<group>"; };
+		2E0EC1E01EE85C7600DF66C9 /* UIImage+Splitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Splitter.h"; sourceTree = "<group>"; };
+		2E0EC1E11EE85C7600DF66C9 /* UIImage+Splitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Splitter.m"; sourceTree = "<group>"; };
+		2E0EC1E51EE85CFB00DF66C9 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		2E0EC1E61EE85CFB00DF66C9 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		2E0EC1E81EE8618D00DF66C9 /* PuzzleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PuzzleCollectionViewCell.xib; sourceTree = "<group>"; };
 		2E1516851EE34A9E00AE426F /* iOSPuzzleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPuzzleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1516991EE34A9E00AE426F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E15169E1EE34A9E00AE426F /* iOSPuzzleGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSPuzzleGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,10 +239,38 @@
 		2E0EC1D51EE63B3800DF66C9 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				2E0EC1D61EE63B7B00DF66C9 /* UIImage+Splitter.h */,
-				2E0EC1D71EE63B7B00DF66C9 /* UIImage+Splitter.m */,
+				2E0EC1E31EE85C8200DF66C9 /* Foundation */,
+				2E0EC1DF1EE85C5500DF66C9 /* UI */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		2E0EC1DB1EE85BE400DF66C9 /* PuzzleCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E0EC1DC1EE85C0500DF66C9 /* PuzzleCollectionViewCell.h */,
+				2E0EC1DD1EE85C0500DF66C9 /* PuzzleCollectionViewCell.m */,
+				2E0EC1E81EE8618D00DF66C9 /* PuzzleCollectionViewCell.xib */,
+			);
+			path = PuzzleCell;
+			sourceTree = "<group>";
+		};
+		2E0EC1DF1EE85C5500DF66C9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2E0EC1E01EE85C7600DF66C9 /* UIImage+Splitter.h */,
+				2E0EC1E11EE85C7600DF66C9 /* UIImage+Splitter.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2E0EC1E31EE85C8200DF66C9 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				2E0EC1E51EE85CFB00DF66C9 /* NSObject+Extension.h */,
+				2E0EC1E61EE85CFB00DF66C9 /* NSObject+Extension.m */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		2E15167C1EE34A9E00AE426F = {
@@ -387,6 +423,7 @@
 		2E3ABB591EE34E9C00E152F8 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				2E0EC1DB1EE85BE400DF66C9 /* PuzzleCell */,
 				2E0E95011EE56001003D85E8 /* LoadingView */,
 				2E0E95001EE55FFA003D85E8 /* StartGameView */,
 				2E3ABB5A1EE34E9C00E152F8 /* PuzzleViewController.h */,
@@ -512,6 +549,7 @@
 				2E3ABB691EE34EBF00E152F8 /* Main.storyboard in Resources */,
 				2E3ABB671EE34EBF00E152F8 /* Assets.xcassets in Resources */,
 				2E0E94D31EE34FD3003D85E8 /* PuzzleViewController.xib in Resources */,
+				2E0EC1E91EE8618D00DF66C9 /* PuzzleCollectionViewCell.xib in Resources */,
 				2E3ABB681EE34EBF00E152F8 /* LaunchScreen.storyboard in Resources */,
 				2E0E950B1EE56257003D85E8 /* StartGameView.xib in Resources */,
 			);
@@ -531,21 +569,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E0EC1E21EE85C7600DF66C9 /* UIImage+Splitter.m in Sources */,
 				2E3ABB5E1EE34E9C00E152F8 /* PuzzleViewController.m in Sources */,
 				2E0E95041EE5602A003D85E8 /* LoadingView.m in Sources */,
 				2E3ABB5D1EE34E9C00E152F8 /* main.m in Sources */,
 				2E0E95071EE56041003D85E8 /* StartGameView.m in Sources */,
 				2E0E94F71EE37AE5003D85E8 /* PuzzleViewModel.m in Sources */,
 				2E0E94F41EE37845003D85E8 /* PuzzlePart.m in Sources */,
+				2E0EC1DE1EE85C0500DF66C9 /* PuzzleCollectionViewCell.m in Sources */,
 				2E0E94FE1EE38C0C003D85E8 /* GameManager.m in Sources */,
 				2E0E94D81EE371E5003D85E8 /* PuzzlePresenter.m in Sources */,
 				2E0E94F31EE37845003D85E8 /* BoardPuzzleModel.m in Sources */,
+				2E0EC1E71EE85CFB00DF66C9 /* NSObject+Extension.m in Sources */,
 				2E0E94E41EE37395003D85E8 /* DownloadManager.m in Sources */,
 				2E3ABB5C1EE34E9C00E152F8 /* AppDelegate.m in Sources */,
 				2E0E950E1EE5F499003D85E8 /* Helper.m in Sources */,
 				DA5FB6F50A79365430C9F0DB /* BoardPuzzleModelBuilder.m in Sources */,
 				DA5324040671661732A49722 /* GameConfig.m in Sources */,
-				2E0EC1D81EE63B7B00DF66C9 /* UIImage+Splitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

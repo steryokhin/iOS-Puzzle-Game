@@ -25,7 +25,10 @@
  */
 @property (nonatomic, weak) IBOutlet StartGameView *startGameView;
 
-@property (nonatomic, weak) UICollectionView *collectionView;
+/*
+ * Collection view to display image parts and manage their location
+ */
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 @end
 

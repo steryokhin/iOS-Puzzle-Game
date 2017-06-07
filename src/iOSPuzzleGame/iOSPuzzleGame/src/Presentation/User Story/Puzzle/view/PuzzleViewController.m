@@ -12,6 +12,9 @@
 #import "PuzzlePresenter.h"
 #import "GameManager.h"
 #import "StartGameView.h"
+#import "GameConfig.h"
+
+static const CGFloat kLineSpacing = 5.0;
 
 @interface PuzzleViewController ()
 
@@ -22,6 +25,13 @@
 
 @implementation PuzzleViewController
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+
+    
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -30,6 +40,11 @@
 
     /// Should be in assembly
     self.presenter = [[PuzzlePresenter alloc] initWithView:self config:[GameManager.instance getNextGame]];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"PuzzleCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PuzzleCell"];
+
+    //self.collectionView.collectionViewLayout.dele
+    self.collectionView.dataSource = self.presenter;
+    
     [self.presenter viewIsLoaded];
 }
 
@@ -81,6 +96,31 @@
 
         case PuzzleGameStateGameInProgress: {
             [self hideStartGameView];
+            
+            if (self.viewModel.config) {
+                CGFloat width = self.collectionView.bounds.size.width;
+                CGFloat height = self.collectionView.bounds.size.height;
+                
+                width -= kLineSpacing * (self.viewModel.config.columnCount - 1);
+                height -= kLineSpacing * (self.viewModel.config.rowCount - 1);
+                
+                CGFloat cellWidth = width/self.viewModel.config.columnCount;
+                CGFloat cellHeight = height/self.viewModel.config.rowCount;
+                
+                UICollectionViewFlowLayout *layout = self.collectionView.collectionViewLayout;//[[UICollectionViewFlowLayout alloc] init];
+                if (layout) {
+                    //layout.estimatedItemSize = CGSizeMake(cellWidth, cellHeight);
+                    layout.itemSize = CGSizeMake(cellWidth, cellHeight);
+                    layout.minimumInteritemSpacing = kLineSpacing;
+                    layout.minimumLineSpacing = kLineSpacing;
+                    
+                    [layout invalidateLayout];
+                }
+                
+                self.collectionView.collectionViewLayout = layout;
+            }
+            
+            [self.collectionView reloadData];
         } break;
 
         case PuzzleGameStateFinished: {
@@ -172,5 +212,27 @@
 - (void)hideStartGameView {
     [self.startGameView setHidden:YES];
 }
+
+#pragma mark - Utility
+- (CGSize)calculateCellSize {
+    CGSize size = CGSizeMake(100, 100);
+    
+    if (self.viewModel.config) {
+        CGFloat width = self.collectionView.bounds.size.width;
+        CGFloat height = self.collectionView.bounds.size.height;
+        
+        width -= kLineSpacing * (self.viewModel.config.columnCount - 1);
+        height -= kLineSpacing * (self.viewModel.config.rowCount - 1);
+        
+        CGFloat cellWidth = width/self.viewModel.config.columnCount;
+        CGFloat cellHeight = height/self.viewModel.config.rowCount;
+        
+        size.width = cellWidth;
+        size.height = cellHeight;
+    }
+    
+    return size;
+}
+
 
 @end
