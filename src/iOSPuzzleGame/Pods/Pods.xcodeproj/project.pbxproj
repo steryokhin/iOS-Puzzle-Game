@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		255DF254062B12A40848C1F0BFA8A293 /* Pods-iOSPuzzleGame-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B499AC634E0CAF066AC651E2828EF322 /* Pods-iOSPuzzleGame-dummy.m */; };
+		371D5AFE297F35E2E557C3E7819DF0C5 /* Pods-iOSPuzzleGame-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 186CFB6E7548F065015C4C993CFA74EC /* Pods-iOSPuzzleGame-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D0D6DC0D79CD842FCDD4C53ADC791EB /* LXReorderableCollectionViewFlowLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5306F5844D4EB934CD1010F42DDADAD /* LXReorderableCollectionViewFlowLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E74A8B7AEDB162C3E09F2AA7ED1B7D4 /* LXReorderableCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 895E9A1EAD3C4141440EEF8AD0671FF4 /* LXReorderableCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F2111FB7CFBC13B308D9CEF71214AF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */; };
+		9D3920C8844DE6555035FC82972AC6E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
+		B065B7C8C841096E49EFD18A5CD36BA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */; };
+		CFA0BAB38D67DE12E61658794C53CD5A /* LXReorderableCollectionViewFlowLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 305578EA4B94D677A5771634690979E6 /* LXReorderableCollectionViewFlowLayout-dummy.m */; };
+		DE3F36D68164B44B5D67F53F44148B73 /* LXReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D404499A2A5D5DBEA077093C9462E727 /* LXReorderableCollectionViewFlowLayout.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ED7023DA668A66168037AA621BC6F67D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26EBC519ED2C3A504FE037BCCA048C58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 330B942DF2F8B345E17956F64F835106;
+			remoteInfo = LXReorderableCollectionViewFlowLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		032F8EEA5CAA6A8257AF0974C3692280 /* LXReorderableCollectionViewFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LXReorderableCollectionViewFlowLayout.modulemap; sourceTree = "<group>"; };
+		186CFB6E7548F065015C4C993CFA74EC /* Pods-iOSPuzzleGame-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iOSPuzzleGame-umbrella.h"; sourceTree = "<group>"; };
+		2FC6AF9E130E2C68ECDB22B84B70EA93 /* LXReorderableCollectionViewFlowLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXReorderableCollectionViewFlowLayout-prefix.pch"; sourceTree = "<group>"; };
+		305578EA4B94D677A5771634690979E6 /* LXReorderableCollectionViewFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LXReorderableCollectionViewFlowLayout-dummy.m"; sourceTree = "<group>"; };
+		4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		60B281A7ADD54F269D976B3B1003E0CA /* Pods_iOSPuzzleGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iOSPuzzleGame.framework; path = "Pods-iOSPuzzleGame.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6F13F2B46F57D0BF6DD7034EDE846353 /* LXReorderableCollectionViewFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LXReorderableCollectionViewFlowLayout.framework; path = LXReorderableCollectionViewFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		792165F2CA033667D6F57205316D40A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		807006238436714D35B64211AE787B5A /* Pods-iOSPuzzleGame-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOSPuzzleGame-acknowledgements.markdown"; sourceTree = "<group>"; };
+		895E9A1EAD3C4141440EEF8AD0671FF4 /* LXReorderableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LXReorderableCollectionViewFlowLayout.h; path = LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99D54C7E286131641C4E0B176F962C7E /* Pods-iOSPuzzleGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOSPuzzleGame.release.xcconfig"; sourceTree = "<group>"; };
+		B499AC634E0CAF066AC651E2828EF322 /* Pods-iOSPuzzleGame-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iOSPuzzleGame-dummy.m"; sourceTree = "<group>"; };
+		BD3891028E26E6A5D3CBC799FF8758DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF960F7E7765DEB97834BC4590D3BFE6 /* Pods-iOSPuzzleGame-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iOSPuzzleGame-acknowledgements.plist"; sourceTree = "<group>"; };
+		C305CD7824977151C043100DE82E7069 /* Pods-iOSPuzzleGame-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOSPuzzleGame-resources.sh"; sourceTree = "<group>"; };
+		C5FB4F509C4D94EBDF2DCE148A2BDDFD /* Pods-iOSPuzzleGame-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iOSPuzzleGame-frameworks.sh"; sourceTree = "<group>"; };
+		C99EB12F7CC99C31B8DD0424E27035D2 /* Pods-iOSPuzzleGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOSPuzzleGame.debug.xcconfig"; sourceTree = "<group>"; };
+		D404499A2A5D5DBEA077093C9462E727 /* LXReorderableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LXReorderableCollectionViewFlowLayout.m; path = LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		D5306F5844D4EB934CD1010F42DDADAD /* LXReorderableCollectionViewFlowLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LXReorderableCollectionViewFlowLayout-umbrella.h"; sourceTree = "<group>"; };
+		E7F488FFA57E1FC947078D12AF1A34F2 /* LXReorderableCollectionViewFlowLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LXReorderableCollectionViewFlowLayout.xcconfig; sourceTree = "<group>"; };
+		F4A201BE32221FD2CC7E99ABA37C0560 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCC1E79CEC0726B4B6F99DA153D215E /* Pods-iOSPuzzleGame.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-iOSPuzzleGame.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BAF38DCD59D2ABCEE4B972409B0F894 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D3920C8844DE6555035FC82972AC6E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E86CFA358BEE67F37673E004D5680B12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F2111FB7CFBC13B308D9CEF71214AF3 /* CoreGraphics.framework in Frameworks */,
+				ED7023DA668A66168037AA621BC6F67D /* Foundation.framework in Frameworks */,
+				B065B7C8C841096E49EFD18A5CD36BA2 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D185E38271E1279D6AC3E7A00CAF9BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D185E38271E1279D6AC3E7A00CAF9BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */,
+				792165F2CA033667D6F57205316D40A1 /* Foundation.framework */,
+				695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		458DDDB1EE2105BE40AF1A54298FE7D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A749AEA7005D02EB6CB84E8D3277648 /* LXReorderableCollectionViewFlowLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A749AEA7005D02EB6CB84E8D3277648 /* LXReorderableCollectionViewFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				895E9A1EAD3C4141440EEF8AD0671FF4 /* LXReorderableCollectionViewFlowLayout.h */,
+				D404499A2A5D5DBEA077093C9462E727 /* LXReorderableCollectionViewFlowLayout.m */,
+				E4A5F5DEA712426E9591A4D4BA0F3309 /* Support Files */,
+			);
+			name = LXReorderableCollectionViewFlowLayout;
+			path = LXReorderableCollectionViewFlowLayout;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				458DDDB1EE2105BE40AF1A54298FE7D8 /* Pods */,
+				C2505E2259C9F2601B4DB57845712A95 /* Products */,
+				D614AA30F3E37335B0456D131D3CB25F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AD55FF328FF444B6C500E2D1ED19DB49 /* Pods-iOSPuzzleGame */ = {
+			isa = PBXGroup;
+			children = (
+				BD3891028E26E6A5D3CBC799FF8758DA /* Info.plist */,
+				FDCC1E79CEC0726B4B6F99DA153D215E /* Pods-iOSPuzzleGame.modulemap */,
+				807006238436714D35B64211AE787B5A /* Pods-iOSPuzzleGame-acknowledgements.markdown */,
+				BF960F7E7765DEB97834BC4590D3BFE6 /* Pods-iOSPuzzleGame-acknowledgements.plist */,
+				B499AC634E0CAF066AC651E2828EF322 /* Pods-iOSPuzzleGame-dummy.m */,
+				C5FB4F509C4D94EBDF2DCE148A2BDDFD /* Pods-iOSPuzzleGame-frameworks.sh */,
+				C305CD7824977151C043100DE82E7069 /* Pods-iOSPuzzleGame-resources.sh */,
+				186CFB6E7548F065015C4C993CFA74EC /* Pods-iOSPuzzleGame-umbrella.h */,
+				C99EB12F7CC99C31B8DD0424E27035D2 /* Pods-iOSPuzzleGame.debug.xcconfig */,
+				99D54C7E286131641C4E0B176F962C7E /* Pods-iOSPuzzleGame.release.xcconfig */,
+			);
+			name = "Pods-iOSPuzzleGame";
+			path = "Target Support Files/Pods-iOSPuzzleGame";
+			sourceTree = "<group>";
+		};
+		C2505E2259C9F2601B4DB57845712A95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F13F2B46F57D0BF6DD7034EDE846353 /* LXReorderableCollectionViewFlowLayout.framework */,
+				60B281A7ADD54F269D976B3B1003E0CA /* Pods_iOSPuzzleGame.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D614AA30F3E37335B0456D131D3CB25F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD55FF328FF444B6C500E2D1ED19DB49 /* Pods-iOSPuzzleGame */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E4A5F5DEA712426E9591A4D4BA0F3309 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4A201BE32221FD2CC7E99ABA37C0560 /* Info.plist */,
+				032F8EEA5CAA6A8257AF0974C3692280 /* LXReorderableCollectionViewFlowLayout.modulemap */,
+				E7F488FFA57E1FC947078D12AF1A34F2 /* LXReorderableCollectionViewFlowLayout.xcconfig */,
+				305578EA4B94D677A5771634690979E6 /* LXReorderableCollectionViewFlowLayout-dummy.m */,
+				2FC6AF9E130E2C68ECDB22B84B70EA93 /* LXReorderableCollectionViewFlowLayout-prefix.pch */,
+				D5306F5844D4EB934CD1010F42DDADAD /* LXReorderableCollectionViewFlowLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LXReorderableCollectionViewFlowLayout";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A2D63DAFA1862D5EEE49094DD48673F3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371D5AFE297F35E2E557C3E7819DF0C5 /* Pods-iOSPuzzleGame-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F39FC69ED1A6D9B38F5468515F2B129A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D0D6DC0D79CD842FCDD4C53ADC791EB /* LXReorderableCollectionViewFlowLayout-umbrella.h in Headers */,
+				6E74A8B7AEDB162C3E09F2AA7ED1B7D4 /* LXReorderableCollectionViewFlowLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		330B942DF2F8B345E17956F64F835106 /* LXReorderableCollectionViewFlowLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0506E992B59C2B9D31A6D0F34A8433FA /* Build configuration list for PBXNativeTarget "LXReorderableCollectionViewFlowLayout" */;
+			buildPhases = (
+				157762292E9AB79D647BBC2FB8B0C328 /* Sources */,
+				E86CFA358BEE67F37673E004D5680B12 /* Frameworks */,
+				F39FC69ED1A6D9B38F5468515F2B129A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LXReorderableCollectionViewFlowLayout;
+			productName = LXReorderableCollectionViewFlowLayout;
+			productReference = 6F13F2B46F57D0BF6DD7034EDE846353 /* LXReorderableCollectionViewFlowLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		984695F3DBD81FC1C093FECED07D50B9 /* Pods-iOSPuzzleGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEC751021CEF4EA1EA6062725D70B714 /* Build configuration list for PBXNativeTarget "Pods-iOSPuzzleGame" */;
+			buildPhases = (
+				C6DF7F304CBFC4907D4B7A2C7740215D /* Sources */,
+				6BAF38DCD59D2ABCEE4B972409B0F894 /* Frameworks */,
+				A2D63DAFA1862D5EEE49094DD48673F3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B3AFED83E972CF6B8EA2DBCE8C6BCE3 /* PBXTargetDependency */,
+			);
+			name = "Pods-iOSPuzzleGame";
+			productName = "Pods-iOSPuzzleGame";
+			productReference = 60B281A7ADD54F269D976B3B1003E0CA /* Pods_iOSPuzzleGame.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C2505E2259C9F2601B4DB57845712A95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				330B942DF2F8B345E17956F64F835106 /* LXReorderableCollectionViewFlowLayout */,
+				984695F3DBD81FC1C093FECED07D50B9 /* Pods-iOSPuzzleGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		157762292E9AB79D647BBC2FB8B0C328 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA0BAB38D67DE12E61658794C53CD5A /* LXReorderableCollectionViewFlowLayout-dummy.m in Sources */,
+				DE3F36D68164B44B5D67F53F44148B73 /* LXReorderableCollectionViewFlowLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6DF7F304CBFC4907D4B7A2C7740215D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255DF254062B12A40848C1F0BFA8A293 /* Pods-iOSPuzzleGame-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B3AFED83E972CF6B8EA2DBCE8C6BCE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LXReorderableCollectionViewFlowLayout;
+			target = 330B942DF2F8B345E17956F64F835106 /* LXReorderableCollectionViewFlowLayout */;
+			targetProxy = 26EBC519ED2C3A504FE037BCCA048C58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		35CEB36067D5DD40FEF5D3353A1493FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99D54C7E286131641C4E0B176F962C7E /* Pods-iOSPuzzleGame.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-iOSPuzzleGame/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iOSPuzzleGame/Pods-iOSPuzzleGame.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_iOSPuzzleGame;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1AB385672D7E32F102E65E465A2AB17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7F488FFA57E1FC947078D12AF1A34F2 /* LXReorderableCollectionViewFlowLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LXReorderableCollectionViewFlowLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LXReorderableCollectionViewFlowLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A62DBC5E8C8451A8DC6F1C470B9F2A1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C99EB12F7CC99C31B8DD0424E27035D2 /* Pods-iOSPuzzleGame.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-iOSPuzzleGame/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iOSPuzzleGame/Pods-iOSPuzzleGame.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_iOSPuzzleGame;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BAE43AFE106148024EA7FEBEB8D54E43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7F488FFA57E1FC947078D12AF1A34F2 /* LXReorderableCollectionViewFlowLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LXReorderableCollectionViewFlowLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LXReorderableCollectionViewFlowLayout/LXReorderableCollectionViewFlowLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LXReorderableCollectionViewFlowLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0506E992B59C2B9D31A6D0F34A8433FA /* Build configuration list for PBXNativeTarget "LXReorderableCollectionViewFlowLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1AB385672D7E32F102E65E465A2AB17 /* Debug */,
+				BAE43AFE106148024EA7FEBEB8D54E43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEC751021CEF4EA1EA6062725D70B714 /* Build configuration list for PBXNativeTarget "Pods-iOSPuzzleGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A62DBC5E8C8451A8DC6F1C470B9F2A1B /* Debug */,
+				35CEB36067D5DD40FEF5D3353A1493FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

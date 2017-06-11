@@ -1,0 +1,6 @@
+framework module Pods_iOSPuzzleGame {
+  umbrella header "Pods-iOSPuzzleGame-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,7 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'iOSPuzzleGame' do
+  #pod 'LXReorderableCollectionViewFlowLayout', '~> 0.2.1'
+  pod 'LXReorderableCollectionViewFlowLayout', :git => 'https://github.com/steryokhin/LXReorderableCollectionViewFlowLayout', :branch => 'develop'
+end

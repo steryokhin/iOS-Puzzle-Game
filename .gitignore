@@ -65,3 +65,6 @@ iOSInjectionProject/
 
 ## app code
 .idea/
+
+## local pods
+pods-local/

@@ -74,6 +74,16 @@ static const float_t kStartGameCounterDelay = 2.0;
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView
+       itemAtIndexPath:(NSIndexPath *)fromIndexPath
+    didMoveToIndexPath:(NSIndexPath *)toIndexPath
+{
+    NSLog(@"move %@ to %@", fromIndexPath, toIndexPath);
+    
+    NSMutableArray *parts = [self.viewModel.model.parts mutableCopy];
+    [parts exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex:toIndexPath.row];
+    self.viewModel.model.parts = parts;
+}
 
 #pragma mark - PuzzleViewOutput protocol implementation
 - (void)viewIsLoaded {

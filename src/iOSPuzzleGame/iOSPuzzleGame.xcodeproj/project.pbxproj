@@ -30,6 +30,7 @@
 		2E3ABB671EE34EBF00E152F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E3ABB611EE34EBF00E152F8 /* Assets.xcassets */; };
 		2E3ABB681EE34EBF00E152F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E3ABB631EE34EBF00E152F8 /* LaunchScreen.storyboard */; };
 		2E3ABB691EE34EBF00E152F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E3ABB651EE34EBF00E152F8 /* Main.storyboard */; };
+		5DC32C36BE9A4083A9749BA4 /* Pods_iOSPuzzleGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CB707194FE5341CCF8BA13 /* Pods_iOSPuzzleGame.framework */; };
 		DA5324040671661732A49722 /* GameConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50E8CD1374FCB6586EE896 /* GameConfig.m */; };
 		DA5FB6F50A79365430C9F0DB /* BoardPuzzleModelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DA503131FA00C4B2962DC0EE /* BoardPuzzleModelBuilder.m */; };
 /* End PBXBuildFile section */
@@ -96,6 +97,9 @@
 		2E3ABB611EE34EBF00E152F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E3ABB641EE34EBF00E152F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E3ABB661EE34EBF00E152F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79A8F87BF6DE63106C68DF3E /* Pods-iOSPuzzleGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPuzzleGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPuzzleGame/Pods-iOSPuzzleGame.debug.xcconfig"; sourceTree = "<group>"; };
+		B39D427B15465151F64A913E /* Pods-iOSPuzzleGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPuzzleGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPuzzleGame/Pods-iOSPuzzleGame.release.xcconfig"; sourceTree = "<group>"; };
+		D0CB707194FE5341CCF8BA13 /* Pods_iOSPuzzleGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPuzzleGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA503131FA00C4B2962DC0EE /* BoardPuzzleModelBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardPuzzleModelBuilder.m; sourceTree = "<group>"; };
 		DA50E8CD1374FCB6586EE896 /* GameConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameConfig.m; sourceTree = "<group>"; };
 		DA51E86D0281F43C9A4B86DD /* GameConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DC32C36BE9A4083A9749BA4 /* Pods_iOSPuzzleGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045D31A1565C9863E8B1A0E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79A8F87BF6DE63106C68DF3E /* Pods-iOSPuzzleGame.debug.xcconfig */,
+				B39D427B15465151F64A913E /* Pods-iOSPuzzleGame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2E0E94D41EE371B6003D85E8 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +293,8 @@
 				2E1516871EE34A9E00AE426F /* iOSPuzzleGame */,
 				2E1516A11EE34A9E00AE426F /* iOSPuzzleGameTests */,
 				2E1516861EE34A9E00AE426F /* Products */,
+				045D31A1565C9863E8B1A0E3 /* Pods */,
+				F7E2263CDD8AAC02CA6CC808 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -461,6 +477,14 @@
 			path = storyboards;
 			sourceTree = "<group>";
 		};
+		F7E2263CDD8AAC02CA6CC808 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0CB707194FE5341CCF8BA13 /* Pods_iOSPuzzleGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -468,9 +492,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E1516A71EE34A9E00AE426F /* Build configuration list for PBXNativeTarget "iOSPuzzleGame" */;
 			buildPhases = (
+				AE34EBF104B1C3AAE998A2B0 /* [CP] Check Pods Manifest.lock */,
 				2E1516811EE34A9E00AE426F /* Sources */,
 				2E1516821EE34A9E00AE426F /* Frameworks */,
 				2E1516831EE34A9E00AE426F /* Resources */,
+				A2E9FFE41C07DB42B5F51EF2 /* [CP] Embed Pods Frameworks */,
+				847C3959FDC32ACF44FEA2BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -563,6 +590,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		847C3959FDC32ACF44FEA2BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSPuzzleGame/Pods-iOSPuzzleGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2E9FFE41C07DB42B5F51EF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSPuzzleGame/Pods-iOSPuzzleGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE34EBF104B1C3AAE998A2B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E1516811EE34A9E00AE426F /* Sources */ = {
@@ -721,6 +796,7 @@
 		};
 		2E1516A81EE34A9E00AE426F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79A8F87BF6DE63106C68DF3E /* Pods-iOSPuzzleGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5HRLMFUWVY;
@@ -735,6 +811,7 @@
 		};
 		2E1516A91EE34A9E00AE426F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B39D427B15465151F64A913E /* Pods-iOSPuzzleGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5HRLMFUWVY;
