@@ -16,6 +16,7 @@
 #import "BoardPuzzleModel.h"
 #import "UIImage+Splitter.h"
 #import "PuzzleCollectionViewCell.h"
+#import "NSMutableArray+Shuffle.h"
 
 static const float_t kDelayBeforeNextTry = 5.0;
 static const float_t kStartGameCounterDelay = 2.0;
@@ -83,6 +84,10 @@ static const float_t kStartGameCounterDelay = 2.0;
     NSMutableArray *parts = [self.viewModel.model.parts mutableCopy];
     [parts exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex:toIndexPath.row];
     self.viewModel.model.parts = parts;
+
+    if (self.viewModel.isSolved) {
+        NSLog(@"DONE!!!!");
+    }
 }
 
 #pragma mark - PuzzleViewOutput protocol implementation
@@ -115,7 +120,7 @@ static const float_t kStartGameCounterDelay = 2.0;
 - (void)imageDownloaded:(UIImage *)image {
     NSLog(@"Image downloaded successfully");
 
-    BoardPuzzleModel *puzzleModel = [[BoardPuzzleModel alloc] initWithOriginalImage:image parts:nil];
+    BoardPuzzleModel *puzzleModel = [[BoardPuzzleModel alloc] initWithOriginalImage:image];
     self.viewModel.model = puzzleModel;
     self.viewModel.gameState = PuzzleGameStateStarting;
     self.viewModel.startGameCounter = self.viewModel.config.startGameCounter;
@@ -124,8 +129,11 @@ static const float_t kStartGameCounterDelay = 2.0;
 
     gcdDispatchAsyncOnBackgroundQueue(^{
         NSArray *images = [image splitWithNumberOfRows:self.viewModel.config.rowCount columns:self.viewModel.config.columnCount];
+        NSMutableArray *shuffleImages = [images mutableCopy];
+        [shuffleImages shuffle];
 
-        BoardPuzzleModel *puzzleModel = [[BoardPuzzleModel alloc] initWithOriginalImage:image parts:images];
+        BoardPuzzleModel *puzzleModel = [[BoardPuzzleModel alloc] initWithOriginalImage:image originalParts:images parts:shuffleImages];
+
         self.viewModel.model = puzzleModel;
 
         /// We don't send event here and we are sure split work fast

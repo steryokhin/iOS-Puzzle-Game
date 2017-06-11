@@ -72,4 +72,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+@interface PuzzleViewModel(helper)
+
+- (BOOL)isSolved;
+
+@end
+
+
 NS_ASSUME_NONNULL_END

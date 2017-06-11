@@ -107,9 +107,8 @@ static const CGFloat kLineSpacing = 5.0;
                 CGFloat cellWidth = width/self.viewModel.config.columnCount;
                 CGFloat cellHeight = height/self.viewModel.config.rowCount;
                 
-                UICollectionViewFlowLayout *layout = self.collectionView.collectionViewLayout;//[[UICollectionViewFlowLayout alloc] init];
+                UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout castObject:self.collectionView.collectionViewLayout];
                 if (layout) {
-                    //layout.estimatedItemSize = CGSizeMake(cellWidth, cellHeight);
                     layout.itemSize = CGSizeMake(cellWidth, cellHeight);
                     layout.minimumInteritemSpacing = kLineSpacing;
                     layout.minimumLineSpacing = kLineSpacing;

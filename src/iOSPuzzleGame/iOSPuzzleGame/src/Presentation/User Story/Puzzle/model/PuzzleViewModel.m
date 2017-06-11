@@ -123,3 +123,13 @@
 }
 
 @end
+
+
+@implementation PuzzleViewModel(helper)
+
+- (BOOL)isSolved {
+    return [self.model.parts isEqualToArray:self.model.originalParts];
+}
+
+@end
+

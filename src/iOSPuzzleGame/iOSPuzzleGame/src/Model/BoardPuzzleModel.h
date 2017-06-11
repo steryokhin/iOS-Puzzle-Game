@@ -17,12 +17,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BoardPuzzleModel : NSObject <NSCopying>
 
 @property (nonatomic, strong) UIImage *originalImage;
-@property (nonatomic, strong) NSArray<PuzzlePart *> *parts;
+@property (nonatomic, strong) NSArray<UIImage *> *originalParts;
+@property (nonatomic, strong) NSArray<UIImage *> *parts;
 
-- (instancetype)initWithOriginalImage:(UIImage *)originalImage parts:(nullable NSArray<PuzzlePart *> *)parts;
+- (instancetype)initWithOriginalImage:(UIImage *)originalImage;
 
-+ (instancetype)modelWithOriginalImage:(UIImage *)originalImage parts:(nullable NSArray<PuzzlePart *> *)parts;
+- (instancetype)initWithOriginalImage:(UIImage *)originalImage originalParts:(nullable NSArray<UIImage *> *)originalParts parts:(nullable NSArray<UIImage *> *)parts;
 
++ (instancetype)modelWithOriginalImage:(UIImage *)originalImage originalParts:(nullable NSArray<UIImage *> *)originalParts parts:(nullable NSArray<UIImage *> *)parts;
 
 - (id)copyWithZone:(nullable NSZone *)zone;
 
@@ -33,6 +35,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSUInteger)hash;
 
 - (NSString *)description;
+
+@end
+
+@interface BoardPuzzleModel(helper)
+
+/*
+ * Return YES if puzzle solved and NO otherwise
+ */
+- (BOOL)isSolved;
 
 @end
 

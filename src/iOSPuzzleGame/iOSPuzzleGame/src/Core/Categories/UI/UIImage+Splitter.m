@@ -27,7 +27,6 @@
             
             CGImageRef subimageRef = CGImageCreateWithImageInRect(self.CGImage, frame);
             UIImage* subImage = [UIImage imageWithCGImage:subimageRef scale:scale orientation:UIImageOrientationUp];
-//            CFRelease(subimageRef);
             
             [subImages addObject:subImage];
         }
