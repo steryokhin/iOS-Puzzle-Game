@@ -8,14 +8,10 @@
 
 #import "LoadingView.h"
 
+/*
+ * Overlay view to display for case when image is not loaded
+ */
 @implementation LoadingView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

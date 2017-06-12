@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/*
+ * Overlay view to display loaded image with start game counter
+ */
 @interface StartGameView : UIView
 
 @property (nonatomic, weak) IBOutlet UIImageView *imagePreviewView;

@@ -10,6 +10,9 @@
 
 @class GameConfig;
 
+/*
+ * Provide interface to the game settings
+ */
 @protocol GameManagerInput <NSObject>
 
 - (GameConfig *)getNextGame;

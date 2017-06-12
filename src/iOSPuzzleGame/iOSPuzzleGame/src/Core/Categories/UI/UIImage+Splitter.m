@@ -11,7 +11,11 @@
 @implementation UIImage (Splitter)
 
 - (NSArray *) splitWithNumberOfRows:(NSUInteger)rows columns:(NSUInteger)columns {
-    float scale = 1.0;//[[UIScreen mainScreen] scale];
+    if (rows < 2 || columns < 2) {
+        return nil;
+    }
+
+    float scale = 1.0;
     
     float height = self.size.height * scale;
     float width  = self.size.width * scale;

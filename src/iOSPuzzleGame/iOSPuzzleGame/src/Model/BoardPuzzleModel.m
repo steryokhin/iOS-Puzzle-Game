@@ -85,16 +85,3 @@
 
 
 @end
-
-@implementation BoardPuzzleModel(helper)
-
-- (BOOL)isSolved {
-    if ([self.parts isEqualToArray:self.originalParts]) {
-        return YES;
-    }
-
-    return NO;
-}
-
-@end
-

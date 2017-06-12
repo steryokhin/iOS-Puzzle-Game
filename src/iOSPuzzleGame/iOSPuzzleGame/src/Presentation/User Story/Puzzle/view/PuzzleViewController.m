@@ -188,10 +188,6 @@ static const CGFloat kCounterAnimationDuration = 1.0;
     }];
 }
 
-- (void)updateWithBoardPuzzleModel:(BoardPuzzleModel *)boardModel {
-
-}
-
 #pragma mark - Rotation Support
 - (BOOL)shouldAutorotate {
     return YES;

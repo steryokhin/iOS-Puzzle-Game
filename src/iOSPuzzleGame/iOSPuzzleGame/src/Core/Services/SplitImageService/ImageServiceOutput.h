@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol ImageServiceInput;
+
 /*
  * Protocol descvribing output methods for the image service
  */
