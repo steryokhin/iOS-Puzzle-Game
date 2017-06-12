@@ -13,6 +13,8 @@
 
 @class StartGameView;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface PuzzleViewController : UIViewController<PuzzleViewInput>
 
 /*
@@ -57,3 +59,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END

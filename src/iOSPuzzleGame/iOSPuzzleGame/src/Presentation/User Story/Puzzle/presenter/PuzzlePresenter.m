@@ -8,6 +8,7 @@
 
 #import "DownloadManagerOutput.h"
 #import "PuzzlePresenter.h"
+#import "PuzzlePresenterOutput.h"
 #import "GameConfig.h"
 #import "PuzzleViewModel.h"
 #import "PuzzleViewInput.h"
@@ -29,6 +30,9 @@ static const float_t kStartGameCounterDelay = 2.0;
 @property (nonatomic, strong) NSTimer *startGameTimer;
 @property (nonatomic, strong) NSTimer *puzzleProgressTimer;
 
+/// output for the puzzle game module
+@property (nonatomic, weak) NSObject<PuzzlePresenterOutput> *output;
+    
 @end
 
 @implementation PuzzlePresenter
@@ -105,6 +109,8 @@ static const float_t kStartGameCounterDelay = 2.0;
         self.viewModel.doesPuzzleSolved = YES;
         
         [self.view updateWithModel:self.viewModel];
+        
+        [self.output puzzleDoneSuccessfully];
     }
 }
 
@@ -154,10 +160,11 @@ static const float_t kStartGameCounterDelay = 2.0;
         self.viewModel.doesPuzzleSolved = YES;
         
         [self.view updateWithModel:self.viewModel];
-
+        
+        [self.output puzzleDoesNotComplete];
+    } else {
+        [self.view updateWithModel:self.viewModel];
     }
-    
-    [self.view updateWithModel:self.viewModel];
 }
 
 #pragma mark - DownloadManagerOutput protocol implementation
@@ -175,7 +182,6 @@ static const float_t kStartGameCounterDelay = 2.0;
         [shuffleImages shuffle];
 
         BoardPuzzleModel *puzzleModel = [[BoardPuzzleModel alloc] initWithOriginalImage:image originalParts:images parts:shuffleImages];
-
         self.viewModel.model = puzzleModel;
 
         /// We don't send event here and we are sure split work fast

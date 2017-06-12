@@ -103,6 +103,7 @@ static const CGFloat kCounterAnimationDuration = 1.0;
         }
 
         if (copyModel.gameState == PuzzleGameStateStarting && self.viewModel.startGameCounter != copyModel.startGameCounter) {
+            [self updateProgressWithModel:copyModel];
             [self updateStartGameCounterWithModel:copyModel];
         }
 
@@ -270,7 +271,7 @@ static const CGFloat kCounterAnimationDuration = 1.0;
 
 #pragma mark - 
 - (void)displayEndGameMessage {
-    //TODO:
+    //TODO: End Game Here
 }
 
 @end

@@ -11,6 +11,8 @@
 @class BoardPuzzleModel;
 @class PuzzleViewModel;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol PuzzleViewInput <NSObject>
 
 /*
@@ -24,3 +26,5 @@
 - (void)updateWithModel:(PuzzleViewModel *)model;
 
 @end
+
+NS_ASSUME_NONNULL_END
