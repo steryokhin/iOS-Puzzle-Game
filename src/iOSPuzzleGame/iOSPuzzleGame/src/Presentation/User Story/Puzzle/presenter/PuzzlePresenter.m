@@ -27,6 +27,9 @@ static const float_t kStartGameCounterDelay = 2.0;
 
 @property (nonatomic, strong) NSObject<DownloadManagerInput> *downloader;
 
+@property (nonatomic, strong) NSTimer *startGameTimer;
+@property (nonatomic, strong) NSTimer *puzzleProgressTimer;
+
 @end
 
 @implementation PuzzlePresenter
@@ -86,12 +89,19 @@ static const float_t kStartGameCounterDelay = 2.0;
     self.viewModel.model.parts = parts;
 
     if (self.viewModel.isSolved) {
-        NSLog(@"DONE!!!!");
+        [self.puzzleProgressTimer invalidate];
+        self.puzzleProgressTimer = nil;
+        
+        self.viewModel.gameState = PuzzleGameStateFinished;
+        self.viewModel.doesPuzzleSolved = YES;
+        
+        [self.view updateWithModel:self.viewModel];
     }
 }
 
 #pragma mark - PuzzleViewOutput protocol implementation
 - (void)viewIsLoaded {
+    [self.view setupWithModel:self.viewModel];
     [self.view updateWithModel:self.viewModel];
 
     [self requestPhoto];
@@ -99,27 +109,51 @@ static const float_t kStartGameCounterDelay = 2.0;
 }
 
 - (void)startGameCounterUpdated {
-    if (self.viewModel.startGameCounter > 1) {
-        self.viewModel.startGameCounter -= 1;
+    self.viewModel.startGameCounter -= 1;
 
-        gcdDispatchAsyncOnMainQueueAfter(kStartGameCounterDelay, ^{
-            [self.view updateWithModel:self.viewModel];
-        });
+    if (self.viewModel.startGameCounter != 0) {
+        [self.view updateWithModel:self.viewModel];
     } else {
-        gcdDispatchAsyncOnMainQueueAfter(kStartGameCounterDelay, ^{
-            self.viewModel.startGameCounter = 0;
-
-            self.viewModel.gameState = PuzzleGameStateGameInProgress;
-            [self.view updateWithModel:self.viewModel];
-        });
-    }
+        self.viewModel.startGameCounter = 0;
+        
+        self.viewModel.gameState = PuzzleGameStateGameInProgress;
+        [self.view updateWithModel:self.viewModel];
+        
+        self.startGameTimer = [NSTimer scheduledTimerWithTimeInterval:kStartGameCounterDelay target:self selector:@selector(delayTimerFired:) userInfo:nil repeats:NO];
+   }
 }
 
+- (void)delayTimerFired:(NSTimer *)delayTimer {
+    
+    self.startGameTimer = nil;
+    self.viewModel.startProgressDate = [NSDate date];
+    
+    if (self.puzzleProgressTimer) {
+        [self.puzzleProgressTimer invalidate];
+        self.puzzleProgressTimer = nil;
+    }
+    self.puzzleProgressTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerProgress:) userInfo:nil repeats:YES];
+}
+
+- (void)timerProgress:(NSTimer *)progressTimer {
+    NSTimeInterval timeInterval = -[self.viewModel.startProgressDate timeIntervalSinceNow];
+
+    if (timeInterval > self.viewModel.config.gameDuration) {
+        [self.puzzleProgressTimer invalidate];
+        self.puzzleProgressTimer = nil;
+        
+        self.viewModel.gameState = PuzzleGameStateFinished;
+        self.viewModel.doesPuzzleSolved = YES;
+        
+        [self.view updateWithModel:self.viewModel];
+
+    }
+    
+    [self.view updateWithModel:self.viewModel];
+}
 
 #pragma mark - DownloadManagerOutput protocol implementation
 - (void)imageDownloaded:(UIImage *)image {
-    NSLog(@"Image downloaded successfully");
-
     BoardPuzzleModel *puzzleModel = [[BoardPuzzleModel alloc] initWithOriginalImage:image];
     self.viewModel.model = puzzleModel;
     self.viewModel.gameState = PuzzleGameStateStarting;
@@ -141,8 +175,6 @@ static const float_t kStartGameCounterDelay = 2.0;
 }
 
 - (void)imageDownloadFailed:(NSError *)error {
-    NSLog(@"Image download failed with error: %@", error);
-
     gcdDispatchAsyncOnMainQueueAfter(kDelayBeforeNextTry, ^{
         [self requestPhoto];
     });

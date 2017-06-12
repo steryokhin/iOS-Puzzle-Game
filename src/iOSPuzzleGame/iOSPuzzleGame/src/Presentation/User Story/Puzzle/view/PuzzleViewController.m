@@ -13,8 +13,12 @@
 #import "GameManager.h"
 #import "StartGameView.h"
 #import "GameConfig.h"
+#import "StyleKit.h"
+#import "LXReorderableCollectionViewFlowLayout.h"
+#import "AppDelegate.h"
 
-static const CGFloat kLineSpacing = 5.0;
+static const CGFloat kLineSpacing = 1.0;
+static const CGFloat kCounterAnimationDuration = 1.0;
 
 @interface PuzzleViewController ()
 
@@ -25,12 +29,6 @@ static const CGFloat kLineSpacing = 5.0;
 
 @implementation PuzzleViewController
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-
-    
-
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,9 +39,12 @@ static const CGFloat kLineSpacing = 5.0;
     /// Should be in assembly
     self.presenter = [[PuzzlePresenter alloc] initWithView:self config:[GameManager.instance getNextGame]];
     [self.collectionView registerNib:[UINib nibWithNibName:@"PuzzleCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PuzzleCell"];
-
-    //self.collectionView.collectionViewLayout.dele
+    
     self.collectionView.dataSource = self.presenter;
+    LXReorderableCollectionViewFlowLayout *collectionViewLayout = [LXReorderableCollectionViewFlowLayout castObject:self.collectionView.collectionViewLayout];
+    if (collectionViewLayout) {
+        collectionViewLayout.longPressGestureRecognizer.minimumPressDuration = 0.2;
+    }
     
     [self.presenter viewIsLoaded];
 }
@@ -54,14 +55,33 @@ static const CGFloat kLineSpacing = 5.0;
     // Dispose of any resources that can be recreated.
 }
 
- 
-- (void)setupWithModel:(PuzzleViewModel *)model {
+
+#pragma mark - Appear/Disappear 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
+    AppDelegate *appDelegate = [AppDelegate castObject:[UIApplication sharedApplication].delegate];
+    if (appDelegate) {
+        [appDelegate setShouldRotate:YES]; // or NO to disable rotation
+    }
+}
+
+- (void)setupWithModel:(PuzzleViewModel *)model {
+    self.frameView.backgroundColor = [UIColor clearColor];
+    CGFloat borderWidth = 1.0f;
+    
+    self.frameView.frame = CGRectInset(self.frameView.frame, -borderWidth, -borderWidth);
+    self.frameView.layer.borderColor = [StyleKit progressColor].CGColor;
+    self.frameView.layer.borderWidth = borderWidth;
+    
+    self.progressHolderView.backgroundColor = [UIColor clearColor];
+    
+    self.progressView.backgroundColor = [StyleKit progressColor];
+    
+    [self updateProgressWithModel:model];
 }
 
 - (void)updateWithModel:(PuzzleViewModel *)model {
-    NSLog(@"updateWithModel: %@", model);
-    
     PuzzleViewModel *copyModel = [model copy];
     
     if (self.viewModel != copyModel) {
@@ -77,7 +97,12 @@ static const CGFloat kLineSpacing = 5.0;
             [self updateStartGameCounterWithModel:copyModel];
         }
 
-        self.viewModel = [copyModel copy];
+        if (self.viewModel.gameState == PuzzleGameStateGameInProgress) {
+            [self updateProgressWithModel:copyModel];
+        }
+        
+
+        self.viewModel = copyModel;
     }
 }
 
@@ -123,7 +148,7 @@ static const CGFloat kLineSpacing = 5.0;
         } break;
 
         case PuzzleGameStateFinished: {
-
+            [self displayEndGameMessage];
         } break;
 
         default: {
@@ -133,17 +158,43 @@ static const CGFloat kLineSpacing = 5.0;
 }
 
 - (void)updateStartGameCounterWithModel:(PuzzleViewModel *)model {
-    NSLog(@"updateStartGameCounterWithModel: %@", model);
-
     self.startGameView.counterLabel.text = [@(model.startGameCounter) stringValue];
+    self.startGameView.counterLabel.transform = CGAffineTransformMakeScale(0.1, 0.1);
+    self.startGameView.counterLabel.alpha = 1.0;
+    [UIView animateWithDuration:kCounterAnimationDuration animations:^{
+        self.startGameView.counterLabel.transform = CGAffineTransformMakeScale(1.0, 1.0);
+        
+        self.startGameView.counterLabel.alpha = 0.2;
+    } completion:^(BOOL finished) {
+        [self.presenter startGameCounterUpdated];
+    }];
+}
 
-    [self.presenter startGameCounterUpdated];
+- (void)updateProgressWithModel:(PuzzleViewModel *)model {
+    [self.view layoutIfNeeded];
+    
+    self.progressHeightConstraint.constant = (1.0 - model.puzzleProgress)*self.progressHolderView.frame.size.height;
+    [UIView animateWithDuration:0.1 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 - (void)updateWithBoardPuzzleModel:(BoardPuzzleModel *)boardModel {
 
 }
 
+#pragma mark - Rotation Support
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationLandscapeLeft; // or Right of course
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskLandscape;
+}
 
 #pragma mark - Subviews managements
 - (void)loadSubviews {
@@ -212,27 +263,9 @@ static const CGFloat kLineSpacing = 5.0;
     [self.startGameView setHidden:YES];
 }
 
-#pragma mark - Utility
-- (CGSize)calculateCellSize {
-    CGSize size = CGSizeMake(100, 100);
-    
-    if (self.viewModel.config) {
-        CGFloat width = self.collectionView.bounds.size.width;
-        CGFloat height = self.collectionView.bounds.size.height;
-        
-        width -= kLineSpacing * (self.viewModel.config.columnCount - 1);
-        height -= kLineSpacing * (self.viewModel.config.rowCount - 1);
-        
-        CGFloat cellWidth = width/self.viewModel.config.columnCount;
-        CGFloat cellHeight = height/self.viewModel.config.rowCount;
-        
-        size.width = cellWidth;
-        size.height = cellHeight;
-    }
-    
-    return size;
-}
-
 #pragma mark - 
+- (void)displayEndGameMessage {
+    //TODO:
+}
 
 @end

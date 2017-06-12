@@ -30,5 +30,23 @@
  */
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
+/*
+ * View to display frame. It is fill with clear color and have 1 pixel frame
+ */
+@property (nonatomic, weak) IBOutlet UIView *frameView;
+
+/*
+ * View which hold the progress view. It have basic height which we are using to draw progress
+ */
+@property (nonatomic, weak) IBOutlet UIView *progressHolderView;
+
+/*
+ * Progress view which drawing the progress user have
+ */
+@property (nonatomic, weak) IBOutlet UIView *progressView;
+
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *progressHeightConstraint;
+
+
 @end
 
