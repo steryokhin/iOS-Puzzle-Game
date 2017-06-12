@@ -48,4 +48,12 @@
 }
 
 
+-(UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+    if (self.shouldRotate) {
+        return UIInterfaceOrientationMaskAll;
+    } else {
+        return UIInterfaceOrientationMaskLandscape;
+    }
+}
+
 @end

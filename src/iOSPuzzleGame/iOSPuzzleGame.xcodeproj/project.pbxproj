@@ -32,6 +32,7 @@
 		2E3ABB691EE34EBF00E152F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E3ABB651EE34EBF00E152F8 /* Main.storyboard */; };
 		2ED98B341EED6DEF00775E55 /* ImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED98B331EED6DEF00775E55 /* ImageService.m */; };
 		2ED98B371EED723600775E55 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED98B361EED723600775E55 /* NSMutableArray+Shuffle.m */; };
+		2ED98B3B1EEDD43B00775E55 /* StyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED98B3A1EEDD43B00775E55 /* StyleKit.m */; };
 		5DC32C36BE9A4083A9749BA4 /* Pods_iOSPuzzleGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CB707194FE5341CCF8BA13 /* Pods_iOSPuzzleGame.framework */; };
 		DA5324040671661732A49722 /* GameConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA50E8CD1374FCB6586EE896 /* GameConfig.m */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,8 @@
 		2ED98B331EED6DEF00775E55 /* ImageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageService.m; sourceTree = "<group>"; };
 		2ED98B351EED723600775E55 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
 		2ED98B361EED723600775E55 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
+		2ED98B391EEDD43B00775E55 /* StyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKit.h; sourceTree = "<group>"; };
+		2ED98B3A1EEDD43B00775E55 /* StyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKit.m; sourceTree = "<group>"; };
 		79A8F87BF6DE63106C68DF3E /* Pods-iOSPuzzleGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPuzzleGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPuzzleGame/Pods-iOSPuzzleGame.debug.xcconfig"; sourceTree = "<group>"; };
 		B39D427B15465151F64A913E /* Pods-iOSPuzzleGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPuzzleGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSPuzzleGame/Pods-iOSPuzzleGame.release.xcconfig"; sourceTree = "<group>"; };
 		D0CB707194FE5341CCF8BA13 /* Pods_iOSPuzzleGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPuzzleGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,6 +375,7 @@
 		2E3ABB511EE34E9C00E152F8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2ED98B381EEDD41500775E55 /* StyleKit */,
 				2E0EC1D51EE63B3800DF66C9 /* Categories */,
 				2E3ABB521EE34E9C00E152F8 /* Extensions */,
 				2E3ABB531EE34E9C00E152F8 /* Helpers */,
@@ -480,6 +484,15 @@
 				2E3ABB651EE34EBF00E152F8 /* Main.storyboard */,
 			);
 			path = storyboards;
+			sourceTree = "<group>";
+		};
+		2ED98B381EEDD41500775E55 /* StyleKit */ = {
+			isa = PBXGroup;
+			children = (
+				2ED98B391EEDD43B00775E55 /* StyleKit.h */,
+				2ED98B3A1EEDD43B00775E55 /* StyleKit.m */,
+			);
+			path = StyleKit;
 			sourceTree = "<group>";
 		};
 		F7E2263CDD8AAC02CA6CC808 /* Frameworks */ = {
@@ -653,6 +666,7 @@
 				2E0EC1E21EE85C7600DF66C9 /* UIImage+Splitter.m in Sources */,
 				2E3ABB5E1EE34E9C00E152F8 /* PuzzleViewController.m in Sources */,
 				2E0E95041EE5602A003D85E8 /* LoadingView.m in Sources */,
+				2ED98B3B1EEDD43B00775E55 /* StyleKit.m in Sources */,
 				2E3ABB5D1EE34E9C00E152F8 /* main.m in Sources */,
 				2E0E95071EE56041003D85E8 /* StartGameView.m in Sources */,
 				2E0E94F71EE37AE5003D85E8 /* PuzzleViewModel.m in Sources */,

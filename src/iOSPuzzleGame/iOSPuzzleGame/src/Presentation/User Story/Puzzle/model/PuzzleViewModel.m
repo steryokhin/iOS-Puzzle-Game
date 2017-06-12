@@ -18,6 +18,7 @@
         _config = config;
 
         self.gameState = PuzzleGameStateNoImage;
+        self.startGameCounter = config.startGameCounter;
     }
 
     return self;
@@ -30,8 +31,7 @@
         self.model = model;
         self.gameState = gameState;
         self.startGameCounter = startGameCounter;
-        self.startGameDelay = startGameDelay;
-        self.gameCounter = gameCounter;
+        self.doesPuzzleSolved = NO;
     }
 
     return self;
@@ -59,9 +59,9 @@
         return NO;
     if (self.startGameCounter != model.startGameCounter)
         return NO;
-    if (self.startGameDelay != model.startGameDelay)
+    if (self.startProgressDate != model.startProgressDate)
         return NO;
-    if (self.gameCounter != model.gameCounter)
+    if (self.doesPuzzleSolved != model.doesPuzzleSolved)
         return NO;
     return YES;
 }
@@ -71,8 +71,8 @@
     hash = hash * 31u + [self.model hash];
     hash = hash * 31u + (NSUInteger) self.gameState;
     hash = hash * 31u + self.startGameCounter;
-    hash = hash * 31u + [[NSNumber numberWithDouble:self.startGameDelay] hash];
-    hash = hash * 31u + [[NSNumber numberWithDouble:self.gameCounter] hash];
+    hash = hash * 31u + [self.startProgressDate hash];
+    hash = hash * 31u + (NSUInteger) self.doesPuzzleSolved;
     return hash;
 }
 
@@ -82,8 +82,7 @@
     [description appendFormat:@", self.model=%@", self.model];
     [description appendFormat:@", self.gameState=%ld", self.gameState];
     [description appendFormat:@", self.startGameCounter=%lu", (unsigned long)self.startGameCounter];
-    [description appendFormat:@", self.startGameDelay=%f", self.startGameDelay];
-    [description appendFormat:@", self.gameCounter=%f", self.gameCounter];
+    [description appendFormat:@", self.gameState=%d", self.doesPuzzleSolved];
     [description appendString:@">"];
     return description;
 }
@@ -96,8 +95,8 @@
         copy.model = [self.model copy];
         copy.gameState = self.gameState;
         copy.startGameCounter = self.startGameCounter;
-        copy.startGameDelay = self.startGameDelay;
-        copy.gameCounter = self.gameCounter;
+        copy.startProgressDate = self.startProgressDate;
+        copy.doesPuzzleSolved = self.doesPuzzleSolved;
     }
 
     return copy;
@@ -118,9 +117,6 @@
     return [[self alloc] initWithConfig:config];
 }
 
-- (BOOL)isLandscape {
-    return YES;
-}
 
 @end
 
@@ -129,6 +125,27 @@
 
 - (BOOL)isSolved {
     return [self.model.parts isEqualToArray:self.model.originalParts];
+}
+
+- (BOOL)isLandscape {
+    return YES;
+}
+
+- (float_t)puzzleProgress {
+    if (!self.config.gameDuration) {
+        return 0.0;
+    }
+
+    float_t progress = self.puzzleRunningTime/self.config.gameDuration;
+    if (progress <= 1.0 && progress >= 0.0) {
+        return progress;
+    }
+    
+    return 1.0;
+}
+
+- (NSTimeInterval)puzzleRunningTime {
+    return -[self.startProgressDate timeIntervalSinceNow];
 }
 
 @end
