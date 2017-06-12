@@ -13,9 +13,14 @@
 
 @protocol PuzzleViewInput <NSObject>
 
+/*
+ * Initial setup of the view with given model
+ */
 - (void)setupWithModel:(PuzzleViewModel *)model;
-- (void)updateWithModel:(PuzzleViewModel *)model;
 
-- (void)updateWithBoardPuzzleModel:(BoardPuzzleModel *)boardModel;
+/*
+ * Update fo hte view with given model. (state machine inside)
+ */
+- (void)updateWithModel:(PuzzleViewModel *)model;
 
 @end

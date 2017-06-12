@@ -77,7 +77,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PuzzleViewModel(helper)
 
 - (BOOL)isSolved;
-- (BOOL)isLandscape;
 
 - (float_t)puzzleProgress;
 - (NSTimeInterval)puzzleRunningTime;

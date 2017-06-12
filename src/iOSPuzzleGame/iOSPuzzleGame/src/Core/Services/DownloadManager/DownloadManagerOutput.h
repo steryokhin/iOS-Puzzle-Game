@@ -9,9 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/*
+ * Output protocol for downloadi manager class.
+ */
 @protocol DownloadManagerOutput <NSObject>
 
+/*
+ * Called when download finished successfull
+ */
 - (void)imageDownloaded:(UIImage *)image;
+
+/*
+ * Called when download failed
+ */
 - (void)imageDownloadFailed:(NSError *)error;
 
 @end

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/*
+ * Puzzle cell representation
+ */
 @interface PuzzleCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;

@@ -15,6 +15,9 @@
 @class PuzzleViewModel;
 @class BoardPuzzleModel;
 
+/*
+ * Presenter class for the Puzzle module. It handle all the logic of working with model, switching stated etc
+ */
 @interface PuzzlePresenter : NSObject<PuzzlePresenterInput, PuzzleViewOutput, DownloadManagerOutput, UICollectionViewDataSource>
 
 @property (nonatomic, strong) PuzzleViewModel *viewModel;

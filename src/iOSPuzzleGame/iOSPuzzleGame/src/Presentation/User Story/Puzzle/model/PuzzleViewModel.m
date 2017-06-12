@@ -127,10 +127,6 @@
     return [self.model.parts isEqualToArray:self.model.originalParts];
 }
 
-- (BOOL)isLandscape {
-    return YES;
-}
-
 - (float_t)puzzleProgress {
     if (!self.config.gameDuration) {
         return 0.0;

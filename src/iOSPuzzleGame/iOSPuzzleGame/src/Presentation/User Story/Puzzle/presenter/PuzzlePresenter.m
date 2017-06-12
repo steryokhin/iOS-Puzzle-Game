@@ -9,7 +9,6 @@
 #import "DownloadManagerOutput.h"
 #import "PuzzlePresenter.h"
 #import "GameConfig.h"
-#import "GameManagerInput.h"
 #import "PuzzleViewModel.h"
 #import "PuzzleViewInput.h"
 #import "DownloadManager.h"
@@ -51,6 +50,16 @@ static const float_t kStartGameCounterDelay = 2.0;
     if (self.downloader) {
         [self.downloader cancel];
         self.downloader  = nil;
+    }
+
+    if (self.startGameTimer) {
+        [self.startGameTimer invalidate];
+        self.startGameTimer = nil;
+    }
+
+    if (self.puzzleProgressTimer) {
+        [self.puzzleProgressTimer invalidate];
+        self.puzzleProgressTimer = nil;
     }
 }
 
@@ -105,7 +114,6 @@ static const float_t kStartGameCounterDelay = 2.0;
     [self.view updateWithModel:self.viewModel];
 
     [self requestPhoto];
-    
 }
 
 - (void)startGameCounterUpdated {
@@ -124,10 +132,11 @@ static const float_t kStartGameCounterDelay = 2.0;
 }
 
 - (void)delayTimerFired:(NSTimer *)delayTimer {
-    
-    self.startGameTimer = nil;
-    self.viewModel.startProgressDate = [NSDate date];
-    
+    if (self.startGameTimer) {
+        self.startGameTimer = nil;
+        self.viewModel.startProgressDate = [NSDate date];
+    }
+
     if (self.puzzleProgressTimer) {
         [self.puzzleProgressTimer invalidate];
         self.puzzleProgressTimer = nil;
