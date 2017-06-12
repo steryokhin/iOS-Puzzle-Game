@@ -15,8 +15,15 @@
 @class PuzzleViewModel;
 @class BoardPuzzleModel;
 
+NS_ASSUME_NONNULL_BEGIN
+
+/*
+ * Presenter class for the Puzzle module. It handle all the logic of working with model, switching stated etc
+ */
 @interface PuzzlePresenter : NSObject<PuzzlePresenterInput, PuzzleViewOutput, DownloadManagerOutput, UICollectionViewDataSource>
 
 @property (nonatomic, strong) PuzzleViewModel *viewModel;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -11,11 +11,20 @@
 @class BoardPuzzleModel;
 @class PuzzleViewModel;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol PuzzleViewInput <NSObject>
 
+/*
+ * Initial setup of the view with given model
+ */
 - (void)setupWithModel:(PuzzleViewModel *)model;
+
+/*
+ * Update fo hte view with given model. (state machine inside)
+ */
 - (void)updateWithModel:(PuzzleViewModel *)model;
 
-- (void)updateWithBoardPuzzleModel:(BoardPuzzleModel *)boardModel;
-
 @end
+
+NS_ASSUME_NONNULL_END

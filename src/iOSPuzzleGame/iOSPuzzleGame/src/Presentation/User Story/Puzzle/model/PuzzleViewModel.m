@@ -18,7 +18,7 @@
         _config = config;
 
         self.gameState = PuzzleGameStateNoImage;
-        self.startGameCounter = config.startGameCounter;
+        self.startGameCounter = -1;
     }
 
     return self;
@@ -82,7 +82,7 @@
     [description appendFormat:@", self.model=%@", self.model];
     [description appendFormat:@", self.gameState=%ld", self.gameState];
     [description appendFormat:@", self.startGameCounter=%lu", (unsigned long)self.startGameCounter];
-    [description appendFormat:@", self.gameState=%d", self.doesPuzzleSolved];
+    [description appendFormat:@", self.doesPuzzleSolved=%d", self.doesPuzzleSolved];
     [description appendString:@">"];
     return description;
 }
@@ -125,10 +125,6 @@
 
 - (BOOL)isSolved {
     return [self.model.parts isEqualToArray:self.model.originalParts];
-}
-
-- (BOOL)isLandscape {
-    return YES;
 }
 
 - (float_t)puzzleProgress {

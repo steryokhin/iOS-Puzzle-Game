@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+///UNUSED
 @protocol ImageServiceInput <NSObject>
 
 - (void)splitImage:(UIImage *)image rows:(NSUInteger)rows columns:(NSUInteger)columns;

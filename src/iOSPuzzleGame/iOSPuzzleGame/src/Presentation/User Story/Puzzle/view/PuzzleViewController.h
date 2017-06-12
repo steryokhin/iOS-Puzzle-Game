@@ -13,6 +13,8 @@
 
 @class StartGameView;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface PuzzleViewController : UIViewController<PuzzleViewInput>
 
 /*
@@ -45,9 +47,16 @@
  */
 @property (nonatomic, weak) IBOutlet UIView *progressView;
 
+/*
+ * Constraint to manage progress view. With constraint changing we change visual representation of the progress
+ */
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *progressHeightConstraint;
 
+/*
+ * Background gradient view
+ */
 @property (nonatomic, weak) IBOutlet UIWebView *gradientView;
 
 @end
 
+NS_ASSUME_NONNULL_END

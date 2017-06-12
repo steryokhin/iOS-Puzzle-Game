@@ -8,8 +8,8 @@
 
 #import "DownloadManagerOutput.h"
 #import "PuzzlePresenter.h"
+#import "PuzzlePresenterOutput.h"
 #import "GameConfig.h"
-#import "GameManagerInput.h"
 #import "PuzzleViewModel.h"
 #import "PuzzleViewInput.h"
 #import "DownloadManager.h"
@@ -30,6 +30,9 @@ static const float_t kStartGameCounterDelay = 2.0;
 @property (nonatomic, strong) NSTimer *startGameTimer;
 @property (nonatomic, strong) NSTimer *puzzleProgressTimer;
 
+/// output for the puzzle game module
+@property (nonatomic, weak) NSObject<PuzzlePresenterOutput> *output;
+    
 @end
 
 @implementation PuzzlePresenter
@@ -51,6 +54,16 @@ static const float_t kStartGameCounterDelay = 2.0;
     if (self.downloader) {
         [self.downloader cancel];
         self.downloader  = nil;
+    }
+
+    if (self.startGameTimer) {
+        [self.startGameTimer invalidate];
+        self.startGameTimer = nil;
+    }
+
+    if (self.puzzleProgressTimer) {
+        [self.puzzleProgressTimer invalidate];
+        self.puzzleProgressTimer = nil;
     }
 }
 
@@ -96,6 +109,8 @@ static const float_t kStartGameCounterDelay = 2.0;
         self.viewModel.doesPuzzleSolved = YES;
         
         [self.view updateWithModel:self.viewModel];
+        
+        [self.output puzzleDoneSuccessfully];
     }
 }
 
@@ -105,7 +120,6 @@ static const float_t kStartGameCounterDelay = 2.0;
     [self.view updateWithModel:self.viewModel];
 
     [self requestPhoto];
-    
 }
 
 - (void)startGameCounterUpdated {
@@ -114,9 +128,8 @@ static const float_t kStartGameCounterDelay = 2.0;
     if (self.viewModel.startGameCounter != 0) {
         [self.view updateWithModel:self.viewModel];
     } else {
-        self.viewModel.startGameCounter = 0;
-        
         self.viewModel.gameState = PuzzleGameStateGameInProgress;
+        self.viewModel.startGameCounter = self.viewModel.config.startGameCounter;
         [self.view updateWithModel:self.viewModel];
         
         self.startGameTimer = [NSTimer scheduledTimerWithTimeInterval:kStartGameCounterDelay target:self selector:@selector(delayTimerFired:) userInfo:nil repeats:NO];
@@ -124,10 +137,11 @@ static const float_t kStartGameCounterDelay = 2.0;
 }
 
 - (void)delayTimerFired:(NSTimer *)delayTimer {
-    
-    self.startGameTimer = nil;
-    self.viewModel.startProgressDate = [NSDate date];
-    
+    if (self.startGameTimer) {
+        self.startGameTimer = nil;
+        self.viewModel.startProgressDate = [NSDate date];
+    }
+
     if (self.puzzleProgressTimer) {
         [self.puzzleProgressTimer invalidate];
         self.puzzleProgressTimer = nil;
@@ -146,10 +160,11 @@ static const float_t kStartGameCounterDelay = 2.0;
         self.viewModel.doesPuzzleSolved = YES;
         
         [self.view updateWithModel:self.viewModel];
-
+        
+        [self.output puzzleDoesNotComplete];
+    } else {
+        [self.view updateWithModel:self.viewModel];
     }
-    
-    [self.view updateWithModel:self.viewModel];
 }
 
 #pragma mark - DownloadManagerOutput protocol implementation
@@ -167,7 +182,6 @@ static const float_t kStartGameCounterDelay = 2.0;
         [shuffleImages shuffle];
 
         BoardPuzzleModel *puzzleModel = [[BoardPuzzleModel alloc] initWithOriginalImage:image originalParts:images parts:shuffleImages];
-
         self.viewModel.model = puzzleModel;
 
         /// We don't send event here and we are sure split work fast
