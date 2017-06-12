@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="collectionView" destination="KGc-1y-wIp" id="Lut-rs-ylr"/>
                 <outlet property="frameView" destination="kq2-VF-6vt" id="v9g-pF-YSM"/>
+                <outlet property="gradientView" destination="WnJ-hw-cnu" id="ypF-rM-Q6A"/>
                 <outlet property="progressHeightConstraint" destination="gix-1j-l9y" id="t4k-6Y-Mc2"/>
                 <outlet property="progressHolderView" destination="iC9-VK-COy" id="Hcp-zw-kkW"/>
                 <outlet property="progressView" destination="1sG-Qz-iAt" id="iv8-Oi-W2r"/>
@@ -24,11 +25,15 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnJ-hw-cnu">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELZ-86-AIu">
                     <rect key="frame" x="0.0" y="0.0" width="974" height="768"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KGc-1y-wIp">
-                            <rect key="frame" x="8" y="8" width="958" height="752"/>
+                            <rect key="frame" x="16" y="16" width="958" height="736"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w56-Kx-dfL" customClass="LXReorderableCollectionViewFlowLayout">
                                 <size key="itemSize" width="50" height="50"/>
@@ -38,12 +43,11 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.76467413650000005" blue="0.13031969569999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="KGc-1y-wIp" secondAttribute="bottom" constant="8" id="4gl-UJ-UGF"/>
-                        <constraint firstItem="KGc-1y-wIp" firstAttribute="leading" secondItem="ELZ-86-AIu" secondAttribute="leading" constant="8" id="Nvd-gC-57Y"/>
-                        <constraint firstAttribute="trailing" secondItem="KGc-1y-wIp" secondAttribute="trailing" constant="8" id="d6V-Us-Kzh"/>
-                        <constraint firstItem="KGc-1y-wIp" firstAttribute="top" secondItem="ELZ-86-AIu" secondAttribute="top" constant="8" id="zDm-hz-4PS"/>
+                        <constraint firstAttribute="bottom" secondItem="KGc-1y-wIp" secondAttribute="bottom" constant="16" id="4gl-UJ-UGF"/>
+                        <constraint firstItem="KGc-1y-wIp" firstAttribute="leading" secondItem="ELZ-86-AIu" secondAttribute="leading" constant="16" id="Nvd-gC-57Y"/>
+                        <constraint firstAttribute="trailing" secondItem="KGc-1y-wIp" secondAttribute="trailing" id="d6V-Us-Kzh"/>
+                        <constraint firstItem="KGc-1y-wIp" firstAttribute="top" secondItem="ELZ-86-AIu" secondAttribute="top" constant="16" id="zDm-hz-4PS"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRn-Ll-JYe" userLabel="Right Panel View">
@@ -89,7 +93,6 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.71184098640000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="kq2-VF-6vt" firstAttribute="centerX" secondItem="NRn-Ll-JYe" secondAttribute="centerX" id="2qb-Ot-rVY"/>
                         <constraint firstItem="led-Hm-A8W" firstAttribute="top" secondItem="NRn-Ll-JYe" secondAttribute="top" constant="8" id="7xf-Wh-Mwg"/>
@@ -108,7 +111,11 @@
                 <constraint firstAttribute="trailing" secondItem="NRn-Ll-JYe" secondAttribute="trailing" id="GyG-4Z-k2b"/>
                 <constraint firstAttribute="bottom" secondItem="NRn-Ll-JYe" secondAttribute="bottom" id="WGf-Xp-2vt"/>
                 <constraint firstItem="ELZ-86-AIu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WO7-Tc-8Wc"/>
+                <constraint firstItem="WnJ-hw-cnu" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="YPG-6h-R0R"/>
+                <constraint firstItem="WnJ-hw-cnu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YjN-eW-R1M"/>
                 <constraint firstAttribute="bottom" secondItem="ELZ-86-AIu" secondAttribute="bottom" id="bg2-uV-LIy"/>
+                <constraint firstItem="WnJ-hw-cnu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kiF-p0-dPe"/>
+                <constraint firstItem="WnJ-hw-cnu" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="trP-B1-q5t"/>
             </constraints>
             <point key="canvasLocation" x="54.5" y="-21.5"/>
         </view>

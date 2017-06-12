@@ -47,6 +47,7 @@
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *progressHeightConstraint;
 
+@property (nonatomic, weak) IBOutlet UIWebView *gradientView;
 
 @end
 

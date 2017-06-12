@@ -29,13 +29,7 @@ static const CGFloat kCounterAnimationDuration = 1.0;
 
 @implementation PuzzleViewController
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-
-    [self loadSubviews];
-
+- (void)setupCollectionView {
     /// Should be in assembly
     self.presenter = [[PuzzlePresenter alloc] initWithView:self config:[GameManager.instance getNextGame]];
     [self.collectionView registerNib:[UINib nibWithNibName:@"PuzzleCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PuzzleCell"];
@@ -45,6 +39,21 @@ static const CGFloat kCounterAnimationDuration = 1.0;
     if (collectionViewLayout) {
         collectionViewLayout.longPressGestureRecognizer.minimumPressDuration = 0.2;
     }
+}
+
+- (void)setupGradientView {
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"gradient" withExtension:@"html"];
+    [self.gradientView loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+
+    [self loadSubviews];
+    [self setupCollectionView];
+    [self setupGradientView];
+    
     
     [self.presenter viewIsLoaded];
 }
