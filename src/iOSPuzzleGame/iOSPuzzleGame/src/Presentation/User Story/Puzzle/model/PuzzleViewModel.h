@@ -21,10 +21,10 @@
  * PuzzleGameStateFinished - stage when game is done with successfull puzzle solved or when counter done
  */
 typedef NS_ENUM(NSUInteger, PuzzleGameState) {
-    PuzzleGameStateNoImage          = 0,
-    PuzzleGameStateStarting         = 1,
-    PuzzleGameStateGameInProgress   = 2,
-    PuzzleGameStateFinished         = 3
+    PuzzleGameStateNoImage          = 1,
+    PuzzleGameStateStarting         = 2,
+    PuzzleGameStateGameInProgress   = 3,
+    PuzzleGameStateFinished         = 4
 };
 
 NS_ASSUME_NONNULL_BEGIN

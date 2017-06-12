@@ -122,9 +122,8 @@ static const float_t kStartGameCounterDelay = 2.0;
     if (self.viewModel.startGameCounter != 0) {
         [self.view updateWithModel:self.viewModel];
     } else {
-        self.viewModel.startGameCounter = 0;
-        
         self.viewModel.gameState = PuzzleGameStateGameInProgress;
+        self.viewModel.startGameCounter = self.viewModel.config.startGameCounter;
         [self.view updateWithModel:self.viewModel];
         
         self.startGameTimer = [NSTimer scheduledTimerWithTimeInterval:kStartGameCounterDelay target:self selector:@selector(delayTimerFired:) userInfo:nil repeats:NO];

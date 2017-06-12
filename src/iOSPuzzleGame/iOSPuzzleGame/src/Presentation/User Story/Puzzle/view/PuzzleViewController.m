@@ -102,7 +102,7 @@ static const CGFloat kCounterAnimationDuration = 1.0;
             self.startGameView.imagePreviewView.image = copyModel.model.originalImage;
         }
 
-        if (self.viewModel.startGameCounter != copyModel.startGameCounter) {
+        if (copyModel.gameState == PuzzleGameStateStarting && self.viewModel.startGameCounter != copyModel.startGameCounter) {
             [self updateStartGameCounterWithModel:copyModel];
         }
 
@@ -212,7 +212,7 @@ static const CGFloat kCounterAnimationDuration = 1.0;
     [self.loadingView setHidden:YES];
     self.loadingView.frame = self.view.bounds;
     [self.view addSubview:self.loadingView];
-    self.loadingView.backgroundColor = [UIColor cyanColor];
+    self.loadingView.backgroundColor = [UIColor grayColor];
 
     NSMutableArray *allConstraints = [NSMutableArray new];
     NSArray *widthConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[view]-0-|"
