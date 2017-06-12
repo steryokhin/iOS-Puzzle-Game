@@ -194,7 +194,7 @@ static const CGFloat kCounterAnimationDuration = 1.0;
 
 #pragma mark - Rotation Support
 - (BOOL)shouldAutorotate {
-    return NO;
+    return YES;
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
