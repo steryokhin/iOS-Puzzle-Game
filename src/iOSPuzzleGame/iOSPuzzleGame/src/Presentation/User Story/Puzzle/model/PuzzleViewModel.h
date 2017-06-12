@@ -47,12 +47,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// Current game state based on the model
 @property (nonatomic, assign) PuzzleGameState gameState;
 
+/// NSDate when timer start ticking. Every 0.1 seconds we'll check how much time from the start we are playing
+/// with calculating current time with startProgressDate
+@property (nonatomic, strong) NSDate *startProgressDate;
+
+/// Counter which is displaying on the screen before game starts
 @property (nonatomic, assign) NSUInteger startGameCounter;
-@property (nonatomic, assign) float_t startGameDelay;
-@property (nonatomic, assign) float_t gameCounter;
+
+/// if YES -> user successfully resolved it
+@property (nonatomic, assign) BOOL doesPuzzleSolved;
 
 - (instancetype)initWithConfig:(GameConfig *)config;
-
 + (instancetype)modelWithConfig:(GameConfig *)config;
 
 - (id)copyWithZone:(nullable NSZone *)zone;
@@ -64,11 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSUInteger)hash;
 
 - (instancetype)initWithConfig:(GameConfig *)config model:(BoardPuzzleModel *)model gameState:(PuzzleGameState)gameState startGameCounter:(NSUInteger)startGameCounter startGameDelay:(float_t)startGameDelay gameCounter:(float_t)gameCounter;
-
 + (instancetype)modelWithConfig:(GameConfig *)config model:(BoardPuzzleModel *)model gameState:(PuzzleGameState)gameState startGameCounter:(NSUInteger)startGameCounter startGameDelay:(float_t)startGameDelay gameCounter:(float_t)gameCounter;
-
-
-- (BOOL)isLandscape;
 
 @end
 
@@ -76,6 +77,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PuzzleViewModel(helper)
 
 - (BOOL)isSolved;
+- (BOOL)isLandscape;
+
+- (float_t)puzzleProgress;
+- (NSTimeInterval)puzzleRunningTime;
 
 @end
 

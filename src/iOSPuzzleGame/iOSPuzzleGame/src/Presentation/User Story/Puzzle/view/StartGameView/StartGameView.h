@@ -11,6 +11,7 @@
 @interface StartGameView : UIView
 
 @property (nonatomic, weak) IBOutlet UIImageView *imagePreviewView;
+
 @property (nonatomic, weak) IBOutlet UILabel *counterLabel;
 
 @end
