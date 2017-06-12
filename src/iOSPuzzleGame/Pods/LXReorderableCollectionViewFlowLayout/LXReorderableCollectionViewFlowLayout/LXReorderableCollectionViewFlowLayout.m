@@ -334,7 +334,10 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
         } break;
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateEnded: {
-            NSIndexPath *currentIndexPath = self.selectedItemIndexPath;
+            [self invalidateLayoutIfNecessary];
+            [self invalidatesScrollTimer];
+            
+            NSIndexPath *currentIndexPath = self.selectedItemIndexPath;            
             
             if (currentIndexPath) {
                 if ([self.delegate respondsToSelector:@selector(collectionView:layout:willEndDraggingItemAtIndexPath:)]) {
@@ -417,8 +420,9 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             [self invalidatesScrollTimer];
         } break;
         case UIGestureRecognizerStateEnded: {
-            [self invalidateLayoutIfNecessary];
-            [self invalidatesScrollTimer];
+            /// We call it on beginnig of the longpress handler for ended status
+//            [self invalidateLayoutIfNecessary];
+//            [self invalidatesScrollTimer];
         } break;
         default: {
             // Do nothing...

@@ -191,5 +191,6 @@ static const float_t kStartGameCounterDelay = 2.0;
     self.downloader = [[DownloadManager alloc] initWithPath:self.viewModel.config.imagePath delegate:self];
     [self.downloader startDownloading];
 }
+    
 
 @end

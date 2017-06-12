@@ -2,21 +2,21 @@ PODS:
   - LXReorderableCollectionViewFlowLayout (0.2.1)
 
 DEPENDENCIES:
-  - LXReorderableCollectionViewFlowLayout (from `https://github.com/steryokhin/LXReorderableCollectionViewFlowLayout`, branch `develop`)
+  - LXReorderableCollectionViewFlowLayout (from `https://github.com/steryokhin/LXReorderableCollectionViewFlowLayout`, branch `master`)
 
 EXTERNAL SOURCES:
   LXReorderableCollectionViewFlowLayout:
-    :branch: develop
+    :branch: master
     :git: https://github.com/steryokhin/LXReorderableCollectionViewFlowLayout
 
 CHECKOUT OPTIONS:
   LXReorderableCollectionViewFlowLayout:
-    :commit: 803d113099800700319ac2213c79c29d5e0258e8
+    :commit: 1a872eb87567501520e201044982737212514daa
     :git: https://github.com/steryokhin/LXReorderableCollectionViewFlowLayout
 
 SPEC CHECKSUMS:
   LXReorderableCollectionViewFlowLayout: acd6fe9fd0800efc656266a345130a2f634abf85
 
-PODFILE CHECKSUM: 4baff35387571a3b777ccd0c3ffa014466343a67
+PODFILE CHECKSUM: daf5ad8fb7a18ce86a77f6dbac26faf770aafb8e
 
 COCOAPODS: 1.2.0
