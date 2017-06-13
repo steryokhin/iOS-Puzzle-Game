@@ -308,13 +308,13 @@ static NSString * const kLXCollectionViewKeyPath = @"collectionView";
             
             __weak typeof(self) weakSelf = self;
             [UIView
-             animateWithDuration:0.3
+             animateWithDuration:0.1
              delay:0.0
              options:UIViewAnimationOptionBeginFromCurrentState
              animations:^{
                  __strong typeof(self) strongSelf = weakSelf;
                  if (strongSelf) {
-                     strongSelf.currentView.transform = CGAffineTransformMakeScale(1.1f, 1.1f);
+                     strongSelf.currentView.transform = CGAffineTransformMakeScale(1.02f, 1.02f);
                      highlightedImageView.alpha = 0.0f;
                      imageView.alpha = 1.0f;
                  }

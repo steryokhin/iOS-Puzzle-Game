@@ -88,7 +88,7 @@ static const float_t kStartGameCounterDelay = 2.0;
         cell.imageView.image = parts[indexPath.row];
     }
 
-    return cell;
+    return rawCell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView

@@ -26,12 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 /*
  * Original parts with right order
  */
-@property (nonatomic, strong) NSArray<UIImage *> *originalParts;
+@property (nonatomic, strong, nullable) NSArray<UIImage *> *originalParts;
 
 /*
  * Parts in order which is visible for the user on the screen
  */
-@property (nonatomic, strong) NSArray<UIImage *> *parts;
+@property (nonatomic, strong, nullable) NSArray<UIImage *> *parts;
 
 /*
  * Initialiser with original image.

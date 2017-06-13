@@ -80,7 +80,7 @@
     NSMutableString *description = [NSMutableString stringWithFormat:@"<%@:%p", NSStringFromClass([self class]), self];
     [description appendFormat:@"self.config=%@", self.config];
     [description appendFormat:@", self.model=%@", self.model];
-    [description appendFormat:@", self.gameState=%ld", self.gameState];
+    [description appendFormat:@", self.gameState=%ld", (unsigned long)self.gameState];
     [description appendFormat:@", self.startGameCounter=%lu", (unsigned long)self.startGameCounter];
     [description appendFormat:@", self.doesPuzzleSolved=%d", self.doesPuzzleSolved];
     [description appendString:@">"];
